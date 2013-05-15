@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'PasteAway' target in the 'PasteAway' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
