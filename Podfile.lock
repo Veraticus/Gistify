@@ -1,0 +1,16 @@
+PODS:
+  - AFNetworking (1.2.1)
+  - MASPreferences (1.0)
+  - MASShortcut (1.2)
+
+DEPENDENCIES:
+  - AFNetworking
+  - MASPreferences
+  - MASShortcut
+
+SPEC CHECKSUMS:
+  AFNetworking: d1ba5908b233189e424e101721acef7905b58efb
+  MASPreferences: b8c112b4b6e6cbd32b8f49d249eb152d1eeb38f8
+  MASShortcut: 154653d32ede2364f72b149a48ac9c64a6542479
+
+COCOAPODS: 0.19.1
