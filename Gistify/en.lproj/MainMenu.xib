@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
-		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.SystemVersion">12D78</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string key="NS.object.0">3084</string>
@@ -41,19 +41,35 @@
 			<object class="NSMenu" id="206620471">
 				<string key="NSTitle"/>
 				<array class="NSMutableArray" key="NSMenuItems">
+					<object class="NSMenuItem" id="1018011098">
+						<reference key="NSMenu" ref="206620471"/>
+						<string key="NSTitle">Gistify Copied Text</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<object class="NSCustomResource" key="NSOnImage" id="1063618800">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">NSMenuCheckmark</string>
+						</object>
+						<object class="NSCustomResource" key="NSMixedImage" id="294061943">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">NSMenuMixedState</string>
+						</object>
+					</object>
+					<object class="NSMenuItem" id="922473697">
+						<reference key="NSMenu" ref="206620471"/>
+						<string key="NSTitle">Gistify Copied Text As...</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="1063618800"/>
+						<reference key="NSMixedImage" ref="294061943"/>
+					</object>
 					<object class="NSMenuItem" id="542244491">
 						<reference key="NSMenu" ref="206620471"/>
 						<string key="NSTitle">Preferences...</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<object class="NSCustomResource" key="NSOnImage" id="567858037">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">NSMenuCheckmark</string>
-						</object>
-						<object class="NSCustomResource" key="NSMixedImage" id="202412667">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">NSMenuMixedState</string>
-						</object>
+						<reference key="NSOnImage" ref="1063618800"/>
+						<reference key="NSMixedImage" ref="294061943"/>
 					</object>
 					<object class="NSMenuItem" id="513260433">
 						<reference key="NSMenu" ref="206620471"/>
@@ -62,16 +78,16 @@
 						<string key="NSTitle"/>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="567858037"/>
-						<reference key="NSMixedImage" ref="202412667"/>
+						<reference key="NSOnImage" ref="1063618800"/>
+						<reference key="NSMixedImage" ref="294061943"/>
 					</object>
 					<object class="NSMenuItem" id="17568168">
 						<reference key="NSMenu" ref="206620471"/>
 						<string key="NSTitle">Quit</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="567858037"/>
-						<reference key="NSMixedImage" ref="202412667"/>
+						<reference key="NSOnImage" ref="1063618800"/>
+						<reference key="NSMixedImage" ref="294061943"/>
 					</object>
 				</array>
 			</object>
@@ -109,6 +125,38 @@
 						<reference key="destination" ref="542244491"/>
 					</object>
 					<int key="connectionID">561</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">gistifyCopiedTextMenuItem</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="1018011098"/>
+					</object>
+					<int key="connectionID">565</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">gistifyCopiedTextAsMenuItem</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="922473697"/>
+					</object>
+					<int key="connectionID">566</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">gistifyCopiedTextAsMenuItem:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="922473697"/>
+					</object>
+					<int key="connectionID">570</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">gistifyCopiedTextMenuItem:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="1018011098"/>
+					</object>
+					<int key="connectionID">571</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -154,6 +202,8 @@
 							<reference ref="542244491"/>
 							<reference ref="17568168"/>
 							<reference ref="513260433"/>
+							<reference ref="922473697"/>
+							<reference ref="1018011098"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -172,6 +222,16 @@
 						<reference key="object" ref="513260433"/>
 						<reference key="parent" ref="206620471"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">563</int>
+						<reference key="object" ref="922473697"/>
+						<reference key="parent" ref="206620471"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">564</int>
+						<reference key="object" ref="1018011098"/>
+						<reference key="parent" ref="206620471"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -184,12 +244,14 @@
 				<string key="553.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="556.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="562.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="563.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="564.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">562</int>
+			<int key="maxID">571</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -198,11 +260,21 @@
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="exitApplication:">id</string>
+						<string key="gistifyCopiedTextAsMenuItem:">id</string>
+						<string key="gistifyCopiedTextMenuItem:">id</string>
 						<string key="showPreferencesWindow:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="exitApplication:">
 							<string key="name">exitApplication:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="gistifyCopiedTextAsMenuItem:">
+							<string key="name">gistifyCopiedTextAsMenuItem:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="gistifyCopiedTextMenuItem:">
+							<string key="name">gistifyCopiedTextMenuItem:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="showPreferencesWindow:">
@@ -211,10 +283,20 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="gistifyCopiedTextAsMenuItem">NSMenuItem</string>
+						<string key="gistifyCopiedTextMenuItem">NSMenuItem</string>
 						<string key="statusMenu">NSMenu</string>
 						<string key="window">NSWindow</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="gistifyCopiedTextAsMenuItem">
+							<string key="name">gistifyCopiedTextAsMenuItem</string>
+							<string key="candidateClassName">NSMenuItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="gistifyCopiedTextMenuItem">
+							<string key="name">gistifyCopiedTextMenuItem</string>
+							<string key="candidateClassName">NSMenuItem</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="statusMenu">
 							<string key="name">statusMenu</string>
 							<string key="candidateClassName">NSMenu</string>

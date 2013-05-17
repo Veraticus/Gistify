@@ -15,6 +15,10 @@
 FOUNDATION_EXPORT NSString *const MASPreferenceKeyShortcut;
 FOUNDATION_EXPORT NSString *const MASPreferenceKeyShortcutEnabled;
 FOUNDATION_EXPORT NSString *const MASPreferenceKeyConstantShortcutEnabled;
-FOUNDATION_EXPORT NSString *const kPreferenceGlobalShortcut;
+
+FOUNDATION_EXPORT NSString *const kGistifyGlobalShortcut;
+FOUNDATION_EXPORT NSString *const kGistifyKeyPathShortcut;
+FOUNDATION_EXPORT NSString *const kGistifyAsGlobalShortcut;
+FOUNDATION_EXPORT NSString *const kGistifyAsKeyPathShortcut;
 
 FOUNDATION_EXPORT NSString *const kGistURL;

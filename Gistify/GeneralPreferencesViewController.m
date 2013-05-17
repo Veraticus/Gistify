@@ -13,7 +13,7 @@
 - (void)loadView {
     [super loadView];
 
-    self.shortcutView.associatedUserDefaultsKey = kPreferenceGlobalShortcut;    
+    self.shortcutView.associatedUserDefaultsKey = kGistifyGlobalShortcut;
 }
 
 #pragma mark -

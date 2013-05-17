@@ -20,11 +20,18 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSMenuItem *gistifyCopiedTextMenuItem;
+@property (assign) IBOutlet NSMenuItem *gistifyCopiedTextAsMenuItem;
+
 @property (nonatomic, retain) IBOutlet NSMenu *statusMenu;
 @property (nonatomic, retain) NSStatusItem *statusItem;
 @property (nonatomic, retain) MASPreferencesWindowController *preferencesWindowController;
 
+- (void)rebindMenuHotkeys;
+
 - (IBAction)exitApplication:(id)sender;
 - (IBAction)showPreferencesWindow:(id)sender;
+- (IBAction)gistifyCopiedTextMenuItem:(id)sender;
+- (IBAction)gistifyCopiedTextAsMenuItem:(id)sender;
 
 @end

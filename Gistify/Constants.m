@@ -11,6 +11,10 @@
 NSString *const MASPreferenceKeyShortcut = @"MASDemoShortcut";
 NSString *const MASPreferenceKeyShortcutEnabled = @"MASDemoShortcutEnabled";
 NSString *const MASPreferenceKeyConstantShortcutEnabled = @"MASDemoConstantShortcutEnabled";
-NSString *const kPreferenceGlobalShortcut = @"PasteAwayShortcut";
+
+NSString *const kGistifyGlobalShortcut = @"GistifyGlobalShortcut";
+NSString *const kGistifyKeyPathShortcut = @"values.GistifyGlobalShortcut";
+NSString *const kGistifyAsGlobalShortcut = @"GistifyAsGlobalShortcut";
+NSString *const kGistifyAsKeyPathShortcut = @"values.GistifyAsGlobalShortcut";
 
 NSString *const kGistURL = @"https://api.github.com";
