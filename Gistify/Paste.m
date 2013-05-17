@@ -20,6 +20,10 @@
     return shared;
 }
 
+- (void)openModal {
+    NSLog(@"Here!");
+}
+
 - (void)sendToService {
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
     NSArray *objects = [pasteboard readObjectsForClasses:@[NSString.class, NSAttributedString.class] options:nil];

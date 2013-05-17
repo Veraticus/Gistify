@@ -12,6 +12,7 @@
 @interface Paste : NSObject
 
 +(Paste *)singleton;
+-(void)openModal;
 -(void)sendToService;
 -(void)receiveFromService:(NSString *)returnedString;
 

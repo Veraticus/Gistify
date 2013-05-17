@@ -13,7 +13,8 @@
 - (void)loadView {
     [super loadView];
 
-    self.shortcutView.associatedUserDefaultsKey = kGistifyGlobalShortcut;
+    self.gistifyCopiedTextView.associatedUserDefaultsKey = kGistifyGlobalShortcut;
+    self.gistifyCopiedTextAsView.associatedUserDefaultsKey = kGistifyAsGlobalShortcut;
 }
 
 #pragma mark -

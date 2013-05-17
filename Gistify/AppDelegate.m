@@ -25,9 +25,13 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
         LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
         [launchController setLaunchAtLogin:YES];
         
-        MASShortcut *defaultPasteShortcut = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSShiftKeyMask|NSCommandKeyMask];
-        NSData *defaultShortcutData = [NSKeyedArchiver archivedDataWithRootObject:defaultPasteShortcut];
-        [[NSUserDefaults standardUserDefaults] setObject:defaultShortcutData forKey:kGistifyGlobalShortcut];
+        MASShortcut *gistifyCopiedText = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSShiftKeyMask|NSCommandKeyMask];
+        NSData *gistifyCopiedTextData = [NSKeyedArchiver archivedDataWithRootObject:gistifyCopiedText];
+        [[NSUserDefaults standardUserDefaults] setObject:gistifyCopiedTextData forKey:kGistifyGlobalShortcut];
+        
+        MASShortcut *gistifyCopiedTextAs = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSControlKeyMask|NSCommandKeyMask];
+        NSData *gistifyCopiedTextAsData = [NSKeyedArchiver archivedDataWithRootObject:gistifyCopiedTextAs];
+        [[NSUserDefaults standardUserDefaults] setObject:gistifyCopiedTextAsData forKey:kGistifyAsGlobalShortcut];
         
         [self showPreferencesWindow:nil];
         
@@ -38,6 +42,10 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
     // Register global shortcuts
     [MASShortcut registerGlobalShortcutWithUserDefaultsKey:kGistifyGlobalShortcut handler:^{
         [[Paste singleton] sendToService];
+    }];
+    
+    [MASShortcut registerGlobalShortcutWithUserDefaultsKey:kGistifyAsGlobalShortcut handler:^{
+        [[Paste singleton] openModal];
     }];
     
     // Observe keybinding changes to update the menu
@@ -55,11 +63,15 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
 }
 
 - (void)rebindMenuHotkeys {
-    NSData *defaultShortcutData = [[NSUserDefaults standardUserDefaults] objectForKey:kGistifyGlobalShortcut];
-    MASShortcut *pasteShortcut = [MASShortcut shortcutWithData:defaultShortcutData];
-    [self.gistifyCopiedTextMenuItem setKeyEquivalent:pasteShortcut.keyCodeStringForKeyEquivalent];
-    [self.gistifyCopiedTextMenuItem setKeyEquivalentModifierMask:pasteShortcut.modifierFlags];    
-}
+    NSData *gistifyCopiedTextData = [[NSUserDefaults standardUserDefaults] objectForKey:kGistifyGlobalShortcut];
+    MASShortcut *gistifyCopiedText = [MASShortcut shortcutWithData:gistifyCopiedTextData];
+    [self.gistifyCopiedTextMenuItem setKeyEquivalent:gistifyCopiedText.keyCodeStringForKeyEquivalent];
+    [self.gistifyCopiedTextMenuItem setKeyEquivalentModifierMask:gistifyCopiedText.modifierFlags];
+    
+    NSData *gistifyCopiedTextAsData = [[NSUserDefaults standardUserDefaults] objectForKey:kGistifyAsGlobalShortcut];
+    MASShortcut *gistifyCopiedTextAs = [MASShortcut shortcutWithData:gistifyCopiedTextAsData];
+    [self.gistifyCopiedTextAsMenuItem setKeyEquivalent:gistifyCopiedTextAs.keyCodeStringForKeyEquivalent];
+    [self.gistifyCopiedTextAsMenuItem setKeyEquivalentModifierMask:gistifyCopiedTextAs.modifierFlags];}
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)obj
                         change:(NSDictionary *)change context:(void *)ctx
@@ -98,7 +110,7 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
 }
 
 - (IBAction)gistifyCopiedTextAsMenuItem:(id)sender {
-    
+    [[Paste singleton] openModal];
 }
 
 @end

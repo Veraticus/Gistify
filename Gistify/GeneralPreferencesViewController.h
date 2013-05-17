@@ -17,7 +17,8 @@
 
 @interface GeneralPreferencesViewController : NSViewController <MASPreferencesViewController>
 
-@property (nonatomic, weak) IBOutlet MASShortcutView *shortcutView;
+@property (nonatomic, weak) IBOutlet MASShortcutView *gistifyCopiedTextView;
+@property (nonatomic, weak) IBOutlet MASShortcutView *gistifyCopiedTextAsView;
 @property (nonatomic, weak) IBOutlet NSPopUpButton *serviceSelector;
 
 -(IBAction)setService:(id)sender;
