@@ -7,6 +7,7 @@
 //
 
 #import "Gist.h"
+#include <stdlib.h>
 
 @implementation Gist
 
@@ -34,10 +35,12 @@
 }
 
 -(void)paste:(NSString *)pasting {
-    NSDictionary *params = @{@"public": @YES, @"files": @{@"test1.txt": @{@"content": pasting}}};
-    NSLog(@"Params: %@", params);
+    int randomNumber = arc4random_uniform(100000);
+    NSString *extension = [[Paste singleton] retrieveExtension];
+    NSString *fileName = [NSString stringWithFormat:@"gistify%i%@", randomNumber, extension];
     
-    [[Paste singleton] receiveFromService:@"https://gist.github.com/5596517"];
+    NSDictionary *params = @{@"public": @YES, @"files": @{fileName: @{@"content": pasting}}};
+    NSLog(@"Params: %@", params);
     
     [self postPath:@"/gists" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [[Paste singleton] receiveFromService:[responseObject objectForKey:@"html_url"]];

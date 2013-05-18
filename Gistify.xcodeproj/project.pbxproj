@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		122892F07873472CB89FB6AC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C9558A27C1403EB3B7DD39 /* libPods.a */; };
 		C20039A91745CC2300C668E6 /* Paste.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039A81745CC2300C668E6 /* Paste.m */; };
+		C20039AD1746C53C00C668E6 /* ModalWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039AB1746C53B00C668E6 /* ModalWindowController.m */; };
+		C20039AE1746C53C00C668E6 /* ModalWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039AC1746C53B00C668E6 /* ModalWindowController.xib */; };
+		C20039B1174702D800C668E6 /* ModalWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039B0174702D800C668E6 /* ModalWindow.m */; };
 		C2222AD5174436D500F543AC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2222AD4174436D500F543AC /* Cocoa.framework */; };
 		C2222B271745446D00F543AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B111745446D00F543AC /* AppDelegate.m */; };
 		C2222B281745446D00F543AC /* clipboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2222B121745446D00F543AC /* clipboard.png */; };
@@ -29,6 +32,11 @@
 		B7B248649E6041588A1C270A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		C20039A71745CC2300C668E6 /* Paste.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paste.h; sourceTree = "<group>"; };
 		C20039A81745CC2300C668E6 /* Paste.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Paste.m; sourceTree = "<group>"; };
+		C20039AA1746C53B00C668E6 /* ModalWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalWindowController.h; sourceTree = "<group>"; };
+		C20039AB1746C53B00C668E6 /* ModalWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalWindowController.m; sourceTree = "<group>"; };
+		C20039AC1746C53B00C668E6 /* ModalWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalWindowController.xib; sourceTree = "<group>"; };
+		C20039AF174702D800C668E6 /* ModalWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalWindow.h; sourceTree = "<group>"; };
+		C20039B0174702D800C668E6 /* ModalWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalWindow.m; sourceTree = "<group>"; };
 		C2222AD1174436D500F543AC /* Gistify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gistify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2222AD4174436D500F543AC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C2222AD7174436D500F543AC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -155,6 +163,8 @@
 				C2222B1C1745446D00F543AC /* GeneralPreferencesViewController.m */,
 				C2222B221745446D00F543AC /* LaunchAtLoginController.h */,
 				C2222B231745446D00F543AC /* LaunchAtLoginController.m */,
+				C20039AA1746C53B00C668E6 /* ModalWindowController.h */,
+				C20039AB1746C53B00C668E6 /* ModalWindowController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -162,8 +172,11 @@
 		C2222B38174544B600F543AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C2222B191745446D00F543AC /* MainMenu.xib */,
 				C2222B1D1745446D00F543AC /* GeneralPreferencesViewController.xib */,
+				C2222B191745446D00F543AC /* MainMenu.xib */,
+				C20039AC1746C53B00C668E6 /* ModalWindowController.xib */,
+				C20039AF174702D800C668E6 /* ModalWindow.h */,
+				C20039B0174702D800C668E6 /* ModalWindow.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -239,6 +252,7 @@
 				C2222B2C1745446D00F543AC /* MainMenu.xib in Resources */,
 				C2222B2E1745446D00F543AC /* GeneralPreferencesViewController.xib in Resources */,
 				C2222B301745446D00F543AC /* Gistify-Info.plist in Resources */,
+				C20039AE1746C53C00C668E6 /* ModalWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +301,8 @@
 				C2222B311745446D00F543AC /* LaunchAtLoginController.m in Sources */,
 				C2222B321745446D00F543AC /* main.m in Sources */,
 				C20039A91745CC2300C668E6 /* Paste.m in Sources */,
+				C20039AD1746C53C00C668E6 /* ModalWindowController.m in Sources */,
+				C20039B1174702D800C668E6 /* ModalWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

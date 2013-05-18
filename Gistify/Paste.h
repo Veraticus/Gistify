@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Gist.h"
+#import "ModalWindowController.h"
 
 @interface Paste : NSObject
 
+@property (nonatomic, retain) NSWindowController *modalWindowController;
+@property (nonatomic, retain) NSString *extension;
+
 +(Paste *)singleton;
+-(NSString *)retrieveExtension;
 -(void)openModal;
 -(void)sendToService;
 -(void)receiveFromService:(NSString *)returnedString;

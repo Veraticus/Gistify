@@ -17,13 +17,13 @@
 #import "Constants.h"
 #import "Paste.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSMenuItem *gistifyCopiedTextMenuItem;
 @property (assign) IBOutlet NSMenuItem *gistifyCopiedTextAsMenuItem;
+@property (assign) IBOutlet NSMenu *statusMenu;
 
-@property (nonatomic, retain) IBOutlet NSMenu *statusMenu;
 @property (nonatomic, retain) NSStatusItem *statusItem;
 @property (nonatomic, retain) MASPreferencesWindowController *preferencesWindowController;
 

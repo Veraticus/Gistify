@@ -12,9 +12,15 @@
 
 - (void)loadView {
     [super loadView];
-
+    
+    [self.defaultFormatTextField setStringValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"format"]];
+    
     self.gistifyCopiedTextView.associatedUserDefaultsKey = kGistifyGlobalShortcut;
     self.gistifyCopiedTextAsView.associatedUserDefaultsKey = kGistifyAsGlobalShortcut;
+}
+
+- (void)controlTextDidChange:(NSNotification *)notification {
+    [[NSUserDefaults standardUserDefaults] setValue:self.defaultFormatTextField.stringValue forKey:@"format"];
 }
 
 #pragma mark -
@@ -35,8 +41,5 @@
     return NSLocalizedString(@"General", @"Toolbar item name for the General preference pane");
 }
 
-- (IBAction)setService:(id)sender {
-    [[NSUserDefaults standardUserDefaults] setObject:self.serviceSelector.selectedItem.title forKey:@"service"];
-}
 
 @end

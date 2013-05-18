@@ -12,11 +12,11 @@
 
 void *kGistifyShortcutContext = &kGistifyShortcutContext;
 
-@synthesize window, statusMenu, statusItem, preferencesWindowController;
+@synthesize statusMenu, statusItem, preferencesWindowController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
 }
 
 - (void)awakeFromNib {
@@ -32,11 +32,11 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
         MASShortcut *gistifyCopiedTextAs = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSControlKeyMask|NSCommandKeyMask];
         NSData *gistifyCopiedTextAsData = [NSKeyedArchiver archivedDataWithRootObject:gistifyCopiedTextAs];
         [[NSUserDefaults standardUserDefaults] setObject:gistifyCopiedTextAsData forKey:kGistifyAsGlobalShortcut];
-        
-        [self showPreferencesWindow:nil];
-        
+    
+        [[NSUserDefaults standardUserDefaults] setObject:@".rb" forKey:@"format"];
         [[NSUserDefaults standardUserDefaults] setObject:@"Gist" forKey:@"service"];
-        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"firstTimeSetup"];
+    
+        [self showPreferencesWindow:nil];
     }
     
     // Register global shortcuts
@@ -50,6 +50,9 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
     
     // Observe keybinding changes to update the menu
     [[NSUserDefaultsController sharedUserDefaultsController] addObserver:self forKeyPath:kGistifyKeyPathShortcut
+                                                                 options:NSKeyValueObservingOptionInitial
+                                                                 context:kGistifyShortcutContext];
+    [[NSUserDefaultsController sharedUserDefaultsController] addObserver:self forKeyPath:kGistifyAsKeyPathShortcut
                                                                  options:NSKeyValueObservingOptionInitial
                                                                  context:kGistifyShortcutContext];
     
@@ -71,7 +74,8 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
     NSData *gistifyCopiedTextAsData = [[NSUserDefaults standardUserDefaults] objectForKey:kGistifyAsGlobalShortcut];
     MASShortcut *gistifyCopiedTextAs = [MASShortcut shortcutWithData:gistifyCopiedTextAsData];
     [self.gistifyCopiedTextAsMenuItem setKeyEquivalent:gistifyCopiedTextAs.keyCodeStringForKeyEquivalent];
-    [self.gistifyCopiedTextAsMenuItem setKeyEquivalentModifierMask:gistifyCopiedTextAs.modifierFlags];}
+    [self.gistifyCopiedTextAsMenuItem setKeyEquivalentModifierMask:gistifyCopiedTextAs.modifierFlags];
+}
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)obj
                         change:(NSDictionary *)change context:(void *)ctx
@@ -82,6 +86,10 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
     else {
         [super observeValueForKeyPath:keyPath ofObject:obj change:change context:ctx];
     }
+}
+
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification{
+    return YES;
 }
 
 - (IBAction)exitApplication:(id)sender {
@@ -100,6 +108,8 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
         NSString *title = NSLocalizedString(@"Preferences", @"Common title for Preferences window");
         self.preferencesWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title:title];
     }
+    
+    [[NSApp mainWindow] close];
     
     [self.preferencesWindowController showWindow:nil];
     [NSApp activateIgnoringOtherApps:YES];

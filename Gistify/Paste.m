@@ -10,6 +10,8 @@
 
 @implementation Paste
 
+@synthesize modalWindowController, extension;
+
 +(Paste *)singleton {
     static dispatch_once_t pred;
     static Paste *shared = nil;
@@ -21,7 +23,33 @@
 }
 
 - (void)openModal {
-    NSLog(@"Here!");
+    if (self.modalWindowController == nil)
+    {
+        ModalWindowController *controller = [[ModalWindowController alloc] initWithWindowNibName:@"ModalWindowController"];
+        self.modalWindowController = controller;
+    }
+    
+    [[NSApp mainWindow] close];
+    [NSApp activateIgnoringOtherApps:YES];
+    [self.modalWindowController.window makeKeyAndOrderFront:self.modalWindowController];
+}
+
+- (NSString *)retrieveExtension {
+    NSString *ext;
+    
+    if (self.extension == nil) {
+        ext = [[NSUserDefaults standardUserDefaults] objectForKey:@"format"];
+    } else {
+        ext = self.extension;
+        self.extension = nil;
+    }
+    
+    NSString *firstLetter = [ext substringToIndex:1];
+    if (![firstLetter isEqualToString:@"."]) {
+        ext = [NSString stringWithFormat:@".%@", ext];
+    }
+
+    return ext;
 }
 
 - (void)sendToService {
@@ -38,7 +66,10 @@
             [[Gist singleton] paste:pasting];
         }
     } else {
-        NSLog(@"Could not find anything appropriate to copy on the clipboard: %@", objects);
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = @"Nothing to Paste";
+        notification.informativeText = @"Try copying something before you Gistify it.";
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     }
 }
 
