@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "GeneralPreferencesViewController.h"
+#import "AboutPreferencesViewController.h"
 #import "MASShortcut.h"
 #import "MASShortcutView+UserDefaults.h"
 #import "MASShortcut+UserDefaults.h"
@@ -25,6 +26,8 @@
 @property (assign) IBOutlet NSMenu *statusMenu;
 
 @property (nonatomic, retain) NSStatusItem *statusItem;
+@property (nonatomic, retain) GeneralPreferencesViewController *generalPreferencesViewController;
+@property (nonatomic, retain) AboutPreferencesViewController *aboutPreferencesViewController;
 @property (nonatomic, retain) MASPreferencesWindowController *preferencesWindowController;
 
 - (void)rebindMenuHotkeys;

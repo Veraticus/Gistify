@@ -12,10 +12,6 @@
 #import "MASShortcut+Monitoring.h"
 #import "MASPreferencesWindowController.h"
 
-FOUNDATION_EXPORT NSString *const MASPreferenceKeyShortcut;
-FOUNDATION_EXPORT NSString *const MASPreferenceKeyShortcutEnabled;
-FOUNDATION_EXPORT NSString *const MASPreferenceKeyConstantShortcutEnabled;
-
 FOUNDATION_EXPORT NSString *const kGistifyGlobalShortcut;
 FOUNDATION_EXPORT NSString *const kGistifyKeyPathShortcut;
 FOUNDATION_EXPORT NSString *const kGistifyAsGlobalShortcut;

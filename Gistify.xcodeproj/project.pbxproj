@@ -12,6 +12,8 @@
 		C20039AD1746C53C00C668E6 /* ModalWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039AB1746C53B00C668E6 /* ModalWindowController.m */; };
 		C20039AE1746C53C00C668E6 /* ModalWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039AC1746C53B00C668E6 /* ModalWindowController.xib */; };
 		C20039B1174702D800C668E6 /* ModalWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039B0174702D800C668E6 /* ModalWindow.m */; };
+		C20039B5174A855C00C668E6 /* AboutPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039B3174A855C00C668E6 /* AboutPreferencesViewController.m */; };
+		C20039B6174A855C00C668E6 /* AboutPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039B4174A855C00C668E6 /* AboutPreferencesViewController.xib */; };
 		C2222AD5174436D500F543AC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2222AD4174436D500F543AC /* Cocoa.framework */; };
 		C2222B271745446D00F543AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B111745446D00F543AC /* AppDelegate.m */; };
 		C2222B281745446D00F543AC /* clipboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2222B121745446D00F543AC /* clipboard.png */; };
@@ -37,6 +39,9 @@
 		C20039AC1746C53B00C668E6 /* ModalWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalWindowController.xib; sourceTree = "<group>"; };
 		C20039AF174702D800C668E6 /* ModalWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalWindow.h; sourceTree = "<group>"; };
 		C20039B0174702D800C668E6 /* ModalWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalWindow.m; sourceTree = "<group>"; };
+		C20039B2174A855C00C668E6 /* AboutPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPreferencesViewController.h; sourceTree = "<group>"; };
+		C20039B3174A855C00C668E6 /* AboutPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPreferencesViewController.m; sourceTree = "<group>"; };
+		C20039B4174A855C00C668E6 /* AboutPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutPreferencesViewController.xib; sourceTree = "<group>"; };
 		C2222AD1174436D500F543AC /* Gistify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gistify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2222AD4174436D500F543AC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C2222AD7174436D500F543AC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -165,6 +170,8 @@
 				C2222B231745446D00F543AC /* LaunchAtLoginController.m */,
 				C20039AA1746C53B00C668E6 /* ModalWindowController.h */,
 				C20039AB1746C53B00C668E6 /* ModalWindowController.m */,
+				C20039B2174A855C00C668E6 /* AboutPreferencesViewController.h */,
+				C20039B3174A855C00C668E6 /* AboutPreferencesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 				C2222B1D1745446D00F543AC /* GeneralPreferencesViewController.xib */,
 				C2222B191745446D00F543AC /* MainMenu.xib */,
 				C20039AC1746C53B00C668E6 /* ModalWindowController.xib */,
+				C20039B4174A855C00C668E6 /* AboutPreferencesViewController.xib */,
 				C20039AF174702D800C668E6 /* ModalWindow.h */,
 				C20039B0174702D800C668E6 /* ModalWindow.m */,
 			);
@@ -253,6 +261,7 @@
 				C2222B2E1745446D00F543AC /* GeneralPreferencesViewController.xib in Resources */,
 				C2222B301745446D00F543AC /* Gistify-Info.plist in Resources */,
 				C20039AE1746C53C00C668E6 /* ModalWindowController.xib in Resources */,
+				C20039B6174A855C00C668E6 /* AboutPreferencesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +312,7 @@
 				C20039A91745CC2300C668E6 /* Paste.m in Sources */,
 				C20039AD1746C53C00C668E6 /* ModalWindowController.m in Sources */,
 				C20039B1174702D800C668E6 /* ModalWindow.m in Sources */,
+				C20039B5174A855C00C668E6 /* AboutPreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

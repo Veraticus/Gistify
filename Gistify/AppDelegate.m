@@ -12,7 +12,7 @@
 
 void *kGistifyShortcutContext = &kGistifyShortcutContext;
 
-@synthesize statusMenu, statusItem, preferencesWindowController;
+@synthesize statusMenu, statusItem, generalPreferencesViewController, aboutPreferencesViewController, preferencesWindowController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -41,11 +41,15 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
     
     // Register global shortcuts
     [MASShortcut registerGlobalShortcutWithUserDefaultsKey:kGistifyGlobalShortcut handler:^{
-        [[Paste singleton] sendToService];
+        if (self.generalPreferencesViewController != nil && self.generalPreferencesViewController.gistifyCopiedTextView.recording != YES) {
+            [[Paste singleton] sendToService];
+        }
     }];
     
     [MASShortcut registerGlobalShortcutWithUserDefaultsKey:kGistifyAsGlobalShortcut handler:^{
-        [[Paste singleton] openModal];
+        if (self.generalPreferencesViewController != nil && self.generalPreferencesViewController.gistifyCopiedTextAsView.recording != YES) {
+            [[Paste singleton] openModal];
+        }
     }];
     
     // Observe keybinding changes to update the menu
@@ -68,13 +72,23 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
 - (void)rebindMenuHotkeys {
     NSData *gistifyCopiedTextData = [[NSUserDefaults standardUserDefaults] objectForKey:kGistifyGlobalShortcut];
     MASShortcut *gistifyCopiedText = [MASShortcut shortcutWithData:gistifyCopiedTextData];
-    [self.gistifyCopiedTextMenuItem setKeyEquivalent:gistifyCopiedText.keyCodeStringForKeyEquivalent];
-    [self.gistifyCopiedTextMenuItem setKeyEquivalentModifierMask:gistifyCopiedText.modifierFlags];
+    if (gistifyCopiedText != nil) {
+        [self.gistifyCopiedTextMenuItem setKeyEquivalent:gistifyCopiedText.keyCodeStringForKeyEquivalent];
+        [self.gistifyCopiedTextMenuItem setKeyEquivalentModifierMask:gistifyCopiedText.modifierFlags];
+    } else {
+        [self.gistifyCopiedTextMenuItem setKeyEquivalent:@""];
+        [self.gistifyCopiedTextMenuItem setKeyEquivalentModifierMask:0];
+    }
     
     NSData *gistifyCopiedTextAsData = [[NSUserDefaults standardUserDefaults] objectForKey:kGistifyAsGlobalShortcut];
     MASShortcut *gistifyCopiedTextAs = [MASShortcut shortcutWithData:gistifyCopiedTextAsData];
-    [self.gistifyCopiedTextAsMenuItem setKeyEquivalent:gistifyCopiedTextAs.keyCodeStringForKeyEquivalent];
-    [self.gistifyCopiedTextAsMenuItem setKeyEquivalentModifierMask:gistifyCopiedTextAs.modifierFlags];
+    if (gistifyCopiedTextAs != nil) {
+        [self.gistifyCopiedTextAsMenuItem setKeyEquivalent:gistifyCopiedTextAs.keyCodeStringForKeyEquivalent];
+        [self.gistifyCopiedTextAsMenuItem setKeyEquivalentModifierMask:gistifyCopiedTextAs.modifierFlags];
+    } else {
+        [self.gistifyCopiedTextAsMenuItem setKeyEquivalent:@""];
+        [self.gistifyCopiedTextAsMenuItem setKeyEquivalentModifierMask:0];
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)obj
@@ -99,8 +113,9 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
 - (IBAction)showPreferencesWindow:(id)sender {
     if (self.preferencesWindowController == nil)
     {
-        NSViewController *generalViewController = [[GeneralPreferencesViewController alloc] initWithNibName:@"GeneralPreferencesViewController" bundle:nil];
-        NSArray *controllers = [[NSArray alloc] initWithObjects:generalViewController, nil];
+        self.generalPreferencesViewController = [[GeneralPreferencesViewController alloc] initWithNibName:@"GeneralPreferencesViewController" bundle:nil];
+        self.aboutPreferencesViewController = [[AboutPreferencesViewController alloc] initWithNibName:@"AboutPreferencesViewController" bundle:nil];
+        NSArray *controllers = [[NSArray alloc] initWithObjects:self.generalPreferencesViewController, [NSNull null], self.aboutPreferencesViewController, nil];
         
         // To add a flexible space between General and Advanced preference panes insert [NSNull null]:
         //     NSArray *controllers = [[NSArray alloc] initWithObjects:generalViewController, [NSNull null], advancedViewController, nil];

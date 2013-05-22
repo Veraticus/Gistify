@@ -8,10 +8,6 @@
 
 #import "Constants.h"
 
-NSString *const MASPreferenceKeyShortcut = @"MASDemoShortcut";
-NSString *const MASPreferenceKeyShortcutEnabled = @"MASDemoShortcutEnabled";
-NSString *const MASPreferenceKeyConstantShortcutEnabled = @"MASDemoConstantShortcutEnabled";
-
 NSString *const kGistifyGlobalShortcut = @"GistifyGlobalShortcut";
 NSString *const kGistifyKeyPathShortcut = @"values.GistifyGlobalShortcut";
 NSString *const kGistifyAsGlobalShortcut = @"GistifyAsGlobalShortcut";
