@@ -16,7 +16,6 @@
 		C20039B6174A855C00C668E6 /* AboutPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039B4174A855C00C668E6 /* AboutPreferencesViewController.xib */; };
 		C2222AD5174436D500F543AC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2222AD4174436D500F543AC /* Cocoa.framework */; };
 		C2222B271745446D00F543AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B111745446D00F543AC /* AppDelegate.m */; };
-		C2222B281745446D00F543AC /* clipboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C2222B121745446D00F543AC /* clipboard.png */; };
 		C2222B291745446D00F543AC /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B141745446D00F543AC /* Constants.m */; };
 		C2222B2A1745446D00F543AC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C2222B151745446D00F543AC /* Credits.rtf */; };
 		C2222B2B1745446D00F543AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2222B171745446D00F543AC /* InfoPlist.strings */; };
@@ -27,6 +26,19 @@
 		C2222B301745446D00F543AC /* Gistify-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2222B201745446D00F543AC /* Gistify-Info.plist */; };
 		C2222B311745446D00F543AC /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B231745446D00F543AC /* LaunchAtLoginController.m */; };
 		C2222B321745446D00F543AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B241745446D00F543AC /* main.m */; };
+		C261BB0F174EC79000B972BF /* Gistify.iconset in Resources */ = {isa = PBXBuildFile; fileRef = C261BB0E174EC79000B972BF /* Gistify.iconset */; };
+		C261BB18174EC89500B972BF /* menubar-clipboard-transmitting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB12174EC89500B972BF /* menubar-clipboard-transmitting@2x.png */; };
+		C261BB19174EC89500B972BF /* menubar-clipboard-idle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB13174EC89500B972BF /* menubar-clipboard-idle@2x.png */; };
+		C261BB1A174EC89500B972BF /* menubar-clipboard-transmitting.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB14174EC89500B972BF /* menubar-clipboard-transmitting.png */; };
+		C261BB1B174EC89500B972BF /* menubar-clipboard-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB15174EC89500B972BF /* menubar-clipboard-idle.png */; };
+		C261BB1E174ECFAF00B972BF /* menubar-clipboard-complete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB1C174ECFAF00B972BF /* menubar-clipboard-complete@2x.png */; };
+		C261BB1F174ECFAF00B972BF /* menubar-clipboard-complete.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB1D174ECFAF00B972BF /* menubar-clipboard-complete.png */; };
+		C261BB26174ED1EE00B972BF /* menubar-clipboard-complete-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB20174ED1EE00B972BF /* menubar-clipboard-complete-highlighted.png */; };
+		C261BB27174ED1EE00B972BF /* menubar-clipboard-complete-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB21174ED1EE00B972BF /* menubar-clipboard-complete-highlighted@2x.png */; };
+		C261BB28174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB22174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted@2x.png */; };
+		C261BB29174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB23174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted.png */; };
+		C261BB2A174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB24174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png */; };
+		C261BB2B174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB25174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +61,6 @@
 		C2222AD9174436D500F543AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C2222B101745446D00F543AC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2222B111745446D00F543AC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C2222B121745446D00F543AC /* clipboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipboard.png; sourceTree = "<group>"; };
 		C2222B131745446D00F543AC /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		C2222B141745446D00F543AC /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		C2222B161745446D00F543AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -65,6 +76,19 @@
 		C2222B221745446D00F543AC /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
 		C2222B231745446D00F543AC /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
 		C2222B241745446D00F543AC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C261BB0E174EC79000B972BF /* Gistify.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = Gistify.iconset; sourceTree = "<group>"; };
+		C261BB12174EC89500B972BF /* menubar-clipboard-transmitting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-transmitting@2x.png"; sourceTree = "<group>"; };
+		C261BB13174EC89500B972BF /* menubar-clipboard-idle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-idle@2x.png"; sourceTree = "<group>"; };
+		C261BB14174EC89500B972BF /* menubar-clipboard-transmitting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-transmitting.png"; sourceTree = "<group>"; };
+		C261BB15174EC89500B972BF /* menubar-clipboard-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-idle.png"; sourceTree = "<group>"; };
+		C261BB1C174ECFAF00B972BF /* menubar-clipboard-complete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-complete@2x.png"; sourceTree = "<group>"; };
+		C261BB1D174ECFAF00B972BF /* menubar-clipboard-complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-complete.png"; sourceTree = "<group>"; };
+		C261BB20174ED1EE00B972BF /* menubar-clipboard-complete-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-complete-highlighted.png"; sourceTree = "<group>"; };
+		C261BB21174ED1EE00B972BF /* menubar-clipboard-complete-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-complete-highlighted@2x.png"; sourceTree = "<group>"; };
+		C261BB22174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-transmitting-highlighted@2x.png"; sourceTree = "<group>"; };
+		C261BB23174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-transmitting-highlighted.png"; sourceTree = "<group>"; };
+		C261BB24174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-idle-highlighted@2x.png"; sourceTree = "<group>"; };
+		C261BB25174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-idle-highlighted.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +161,7 @@
 		C2222B341745447800F543AC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				C261BB0E174EC79000B972BF /* Gistify.iconset */,
 				C2222B361745448700F543AC /* Images */,
 			);
 			name = Assets;
@@ -156,7 +181,18 @@
 		C2222B361745448700F543AC /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				C2222B121745446D00F543AC /* clipboard.png */,
+				C261BB20174ED1EE00B972BF /* menubar-clipboard-complete-highlighted.png */,
+				C261BB21174ED1EE00B972BF /* menubar-clipboard-complete-highlighted@2x.png */,
+				C261BB22174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted@2x.png */,
+				C261BB23174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted.png */,
+				C261BB24174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png */,
+				C261BB25174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png */,
+				C261BB1C174ECFAF00B972BF /* menubar-clipboard-complete@2x.png */,
+				C261BB1D174ECFAF00B972BF /* menubar-clipboard-complete.png */,
+				C261BB12174EC89500B972BF /* menubar-clipboard-transmitting@2x.png */,
+				C261BB13174EC89500B972BF /* menubar-clipboard-idle@2x.png */,
+				C261BB14174EC89500B972BF /* menubar-clipboard-transmitting.png */,
+				C261BB15174EC89500B972BF /* menubar-clipboard-idle.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -254,7 +290,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2222B281745446D00F543AC /* clipboard.png in Resources */,
 				C2222B2A1745446D00F543AC /* Credits.rtf in Resources */,
 				C2222B2B1745446D00F543AC /* InfoPlist.strings in Resources */,
 				C2222B2C1745446D00F543AC /* MainMenu.xib in Resources */,
@@ -262,6 +297,19 @@
 				C2222B301745446D00F543AC /* Gistify-Info.plist in Resources */,
 				C20039AE1746C53C00C668E6 /* ModalWindowController.xib in Resources */,
 				C20039B6174A855C00C668E6 /* AboutPreferencesViewController.xib in Resources */,
+				C261BB0F174EC79000B972BF /* Gistify.iconset in Resources */,
+				C261BB18174EC89500B972BF /* menubar-clipboard-transmitting@2x.png in Resources */,
+				C261BB19174EC89500B972BF /* menubar-clipboard-idle@2x.png in Resources */,
+				C261BB1A174EC89500B972BF /* menubar-clipboard-transmitting.png in Resources */,
+				C261BB1B174EC89500B972BF /* menubar-clipboard-idle.png in Resources */,
+				C261BB1E174ECFAF00B972BF /* menubar-clipboard-complete@2x.png in Resources */,
+				C261BB1F174ECFAF00B972BF /* menubar-clipboard-complete.png in Resources */,
+				C261BB26174ED1EE00B972BF /* menubar-clipboard-complete-highlighted.png in Resources */,
+				C261BB27174ED1EE00B972BF /* menubar-clipboard-complete-highlighted@2x.png in Resources */,
+				C261BB28174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted@2x.png in Resources */,
+				C261BB29174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted.png in Resources */,
+				C261BB2A174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png in Resources */,
+				C261BB2B174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

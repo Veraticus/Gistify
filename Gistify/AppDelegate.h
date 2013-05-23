@@ -31,6 +31,7 @@
 @property (nonatomic, retain) MASPreferencesWindowController *preferencesWindowController;
 
 - (void)rebindMenuHotkeys;
+- (void)setMenuImage:(NSString *) image;
 
 - (IBAction)exitApplication:(id)sender;
 - (IBAction)showPreferencesWindow:(id)sender;

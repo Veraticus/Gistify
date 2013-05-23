@@ -41,13 +41,13 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
     
     // Register global shortcuts
     [MASShortcut registerGlobalShortcutWithUserDefaultsKey:kGistifyGlobalShortcut handler:^{
-        if (self.generalPreferencesViewController != nil && self.generalPreferencesViewController.gistifyCopiedTextView.recording != YES) {
+        if (self.generalPreferencesViewController == nil || self.generalPreferencesViewController.gistifyCopiedTextView.recording != YES) {
             [[Paste singleton] sendToService];
         }
     }];
     
     [MASShortcut registerGlobalShortcutWithUserDefaultsKey:kGistifyAsGlobalShortcut handler:^{
-        if (self.generalPreferencesViewController != nil && self.generalPreferencesViewController.gistifyCopiedTextAsView.recording != YES) {
+        if (self.generalPreferencesViewController == nil || self.generalPreferencesViewController.gistifyCopiedTextAsView.recording != YES) {
             [[Paste singleton] openModal];
         }
     }];
@@ -63,10 +63,9 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
     // Set up the menu with shortcut keys
     [self rebindMenuHotkeys];
     
-    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setMenu:statusMenu];
-    [statusItem setImage:[NSImage imageNamed:@"clipboard"]];
-    [statusItem setHighlightMode:YES];
+    [self setMenuImage: @"idle"];
 }
 
 - (void)rebindMenuHotkeys {
@@ -89,6 +88,16 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
         [self.gistifyCopiedTextAsMenuItem setKeyEquivalent:@""];
         [self.gistifyCopiedTextAsMenuItem setKeyEquivalentModifierMask:0];
     }
+}
+
+- (void)setMenuImage:(NSString *) image {
+    NSString *imageName = [NSString stringWithFormat:@"menubar-clipboard-%@", image];
+    NSString *highlightedName = [NSString stringWithFormat:@"menubar-clipboard-%@-highlighted", image];
+    
+    [statusItem setImage:[NSImage imageNamed:imageName]];
+    [statusItem setAlternateImage:[NSImage imageNamed:highlightedName]];
+    [statusItem setHighlightMode:YES];
+
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)obj

@@ -62,6 +62,9 @@
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSString *serviceName = [defaults objectForKey:@"service"];
         
+        AppDelegate *app = (AppDelegate *)[NSApp delegate];
+        [app setMenuImage:@"transmitting"];
+        
         if ([serviceName isEqualToString:@"Gist"]) {
             [[Gist singleton] paste:pasting];
         }
@@ -83,6 +86,13 @@
     notification.informativeText = @"The URL has been added to your clipboard.";
     notification.soundName = NSUserNotificationDefaultSoundName;
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    
+    AppDelegate *app = (AppDelegate *)[NSApp delegate];
+    [app setMenuImage:@"complete"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
+        [app setMenuImage:@"idle"];
+    });
 }
 
 @end
