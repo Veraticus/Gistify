@@ -23,6 +23,14 @@
     [[NSUserDefaults standardUserDefaults] setValue:self.defaultFormatTextField.stringValue forKey:@"format"];
 }
 
+- (IBAction)changeVisibility:(id)sender {
+    if ([self.defaultVisibility.titleOfSelectedItem isEqualToString:@"Secret"]) {
+        [[NSUserDefaults standardUserDefaults] setValue:@"secret" forKey:@"visibility"];
+    } else {
+        [[NSUserDefaults standardUserDefaults] setValue:@"public" forKey:@"visibility"];
+    }
+}
+
 #pragma mark -
 #pragma mark MASPreferencesViewController
 

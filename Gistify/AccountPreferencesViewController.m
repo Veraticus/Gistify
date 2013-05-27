@@ -26,6 +26,8 @@
 
 - (void)loadView {
     [super loadView];
+    
+    self.radioButtons.intercellSpacing = NSMakeSize(5.0, 10.0);
 
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"anonymous"] isEqualToString:@"true"]) {
         [self.radioButtons selectCellWithTag:1];
@@ -46,7 +48,6 @@
             [[NSUserDefaults standardUserDefaults] setObject:self.usernameField.stringValue forKey:@"username"];
             [[NSUserDefaults standardUserDefaults] setObject:self.passwordField.stringValue forKey:@"password"];
             
-            self.button.enabled = NO;
             [[Gist singleton] authenticate];
         }
     } else {

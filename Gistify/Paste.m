@@ -10,7 +10,7 @@
 
 @implementation Paste
 
-@synthesize modalWindowController, extension, anonymous;
+@synthesize modalWindowController, extension, anonymous, visibility;
 
 +(Paste *)singleton {
     static dispatch_once_t pred;
@@ -62,11 +62,21 @@
         self.anonymous = nil;
     }
     
-    NSLog(@"Anonymous? %@", anon);
-    
     return anon;
 }
 
+-(NSString *)retrieveVisibility {
+    NSString *vis;
+    
+    if (self.visibility == nil) {
+        vis = [[NSUserDefaults standardUserDefaults] objectForKey:@"visibility"];
+    } else {
+        vis = self.visibility;
+        self.visibility = nil;
+    }
+    
+    return vis;
+}
 
 - (void)sendToService {
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];

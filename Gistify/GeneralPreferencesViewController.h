@@ -20,5 +20,9 @@
 @property (assign) IBOutlet MASShortcutView *gistifyCopiedTextView;
 @property (assign) IBOutlet MASShortcutView *gistifyCopiedTextAsView;
 @property (assign) IBOutlet NSTextField *defaultFormatTextField;
+@property (assign) IBOutlet NSPopUpButton *defaultVisibility;
+
+- (void)controlTextDidChange:(NSNotification *)notification;
+- (IBAction)changeVisibility:(id)sender;
 
 @end

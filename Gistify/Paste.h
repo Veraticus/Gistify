@@ -16,10 +16,12 @@
 @property (nonatomic, retain) NSWindowController *modalWindowController;
 @property (nonatomic, retain) NSString *extension;
 @property (nonatomic, retain) NSString *anonymous;
+@property (nonatomic, retain) NSString *visibility;
 
 +(Paste *)singleton;
 -(NSString *)retrieveExtension;
 -(NSString *)retrieveAnonymous;
+-(NSString *)retrieveVisibility;
 -(void)openModal;
 -(void)sendToService;
 -(void)receiveFromService:(NSString *)returnedString;

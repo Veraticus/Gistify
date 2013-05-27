@@ -9,11 +9,15 @@
 #import <Cocoa/Cocoa.h>
 #import "Paste.h"
 
-@interface ModalWindowController : NSWindowController
+@interface ModalWindowController : NSWindowController <NSWindowDelegate>
 
 @property (assign) IBOutlet NSTextField *pasteFormat;
+@property (assign) IBOutlet NSPopUpButton *visibility;
+@property (assign) IBOutlet NSPopUpButton *anonymous;
 
 -(IBAction)closeWindow:(id)sender;
+-(IBAction)changeVisibility:(id)sender;
+-(IBAction)changeAnonymous:(id)sender;
 -(IBAction)performPaste:(id)sender;
 
 @end

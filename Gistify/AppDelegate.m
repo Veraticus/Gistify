@@ -73,6 +73,7 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
     [[NSUserDefaults standardUserDefaults] setObject:@".rb" forKey:@"format"];
     [[NSUserDefaults standardUserDefaults] setObject:@"Gist" forKey:@"service"];
     [[NSUserDefaults standardUserDefaults] setObject:@"true" forKey:@"anonymous"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"public" forKey:@"visibility"];
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"username"];
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"password"];
     
@@ -81,6 +82,7 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
 
 - (void)upgradeDefaults {
     [[NSUserDefaults standardUserDefaults] setObject:@"true" forKey:@"anonymous"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"public" forKey:@"visibility"];
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"username"];
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"password"];
 }

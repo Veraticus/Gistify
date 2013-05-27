@@ -38,9 +38,16 @@
     int randomNumber = arc4random_uniform(100000);
     NSString *extension = [[Paste singleton] retrieveExtension];
     NSString *fileName = [NSString stringWithFormat:@"gistify%i%@", randomNumber, extension];
+
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:@{fileName: @{@"content": pasting}} forKey:@"files"];
     
-    NSDictionary *params = @{@"public": @YES, @"files": @{fileName: @{@"content": pasting}}};
-    
+    if ([[[Paste singleton] retrieveVisibility] isEqualToString:@"public"]) {
+        [params setObject:@YES forKey:@"public"];
+    } else {
+        [params setObject:@NO forKey:@"public"];
+    }
+        
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
     if ([[[Paste singleton] retrieveAnonymous] isEqualToString:@"false"] && token != nil) {
         [self setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"token %@", token]];
@@ -51,7 +58,10 @@
     [self postPath:@"/gists" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [[Paste singleton] receiveFromService:[responseObject objectForKey:@"html_url"]];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Horrible failure: %@", error);
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"OK"];
+        [alert setMessageText:@"Gistify failed! Make sure you have text to Gistify on your clipboard."];
+        [alert runModal];
     }];
 }
 
