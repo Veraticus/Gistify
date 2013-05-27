@@ -15,5 +15,6 @@
 
 +(Gist *)singleton;
 -(void)paste:(NSString *)pasting;
+-(void)authenticate;
 
 @end

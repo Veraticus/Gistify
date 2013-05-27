@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "GeneralPreferencesViewController.h"
 #import "AboutPreferencesViewController.h"
+#import "AccountPreferencesViewController.h"
 #import "MASShortcut.h"
 #import "MASShortcutView+UserDefaults.h"
 #import "MASShortcut+UserDefaults.h"
@@ -17,6 +18,8 @@
 #import "LaunchAtLoginController.h"
 #import "Constants.h"
 #import "Paste.h"
+
+@class AccountPreferencesViewController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
@@ -28,8 +31,11 @@
 @property (nonatomic, retain) NSStatusItem *statusItem;
 @property (nonatomic, retain) GeneralPreferencesViewController *generalPreferencesViewController;
 @property (nonatomic, retain) AboutPreferencesViewController *aboutPreferencesViewController;
+@property (nonatomic, retain) AccountPreferencesViewController *accountPreferencesViewController;
 @property (nonatomic, retain) MASPreferencesWindowController *preferencesWindowController;
 
+- (void)assignDefaults;
+- (void)upgradeDefaults;
 - (void)rebindMenuHotkeys;
 - (void)setMenuImage:(NSString *) image;
 

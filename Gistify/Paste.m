@@ -10,7 +10,7 @@
 
 @implementation Paste
 
-@synthesize modalWindowController, extension;
+@synthesize modalWindowController, extension, anonymous;
 
 +(Paste *)singleton {
     static dispatch_once_t pred;
@@ -52,6 +52,22 @@
     return ext;
 }
 
+- (NSString *)retrieveAnonymous {
+    NSString *anon;
+    
+    if (self.anonymous == nil) {
+        anon = [[NSUserDefaults standardUserDefaults] objectForKey:@"anonymous"];
+    } else {
+        anon = self.anonymous;
+        self.anonymous = nil;
+    }
+    
+    NSLog(@"Anonymous? %@", anon);
+    
+    return anon;
+}
+
+
 - (void)sendToService {
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
     NSArray *objects = [pasteboard readObjectsForClasses:@[NSString.class, NSAttributedString.class] options:nil];
@@ -59,8 +75,7 @@
     if (objects != nil && objects.count != 0) {
         NSString *pasting = [objects objectAtIndex:0];
         
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSString *serviceName = [defaults objectForKey:@"service"];
+        NSString *serviceName = [[NSUserDefaults standardUserDefaults] objectForKey:@"service"];
         
         AppDelegate *app = (AppDelegate *)[NSApp delegate];
         [app setMenuImage:@"transmitting"];

@@ -12,7 +12,7 @@
 
 void *kGistifyShortcutContext = &kGistifyShortcutContext;
 
-@synthesize statusMenu, statusItem, generalPreferencesViewController, aboutPreferencesViewController, preferencesWindowController;
+@synthesize statusMenu, statusItem, generalPreferencesViewController, aboutPreferencesViewController, accountPreferencesViewController, preferencesWindowController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -22,21 +22,11 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
 - (void)awakeFromNib {
     // First-time setup
     if (![[NSUserDefaults standardUserDefaults] objectForKey:kGistifyGlobalShortcut]) {
-        LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
-        [launchController setLaunchAtLogin:YES];
-        
-        MASShortcut *gistifyCopiedText = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSShiftKeyMask|NSCommandKeyMask];
-        NSData *gistifyCopiedTextData = [NSKeyedArchiver archivedDataWithRootObject:gistifyCopiedText];
-        [[NSUserDefaults standardUserDefaults] setObject:gistifyCopiedTextData forKey:kGistifyGlobalShortcut];
-        
-        MASShortcut *gistifyCopiedTextAs = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSControlKeyMask|NSCommandKeyMask];
-        NSData *gistifyCopiedTextAsData = [NSKeyedArchiver archivedDataWithRootObject:gistifyCopiedTextAs];
-        [[NSUserDefaults standardUserDefaults] setObject:gistifyCopiedTextAsData forKey:kGistifyAsGlobalShortcut];
+        [self assignDefaults];
+    }
     
-        [[NSUserDefaults standardUserDefaults] setObject:@".rb" forKey:@"format"];
-        [[NSUserDefaults standardUserDefaults] setObject:@"Gist" forKey:@"service"];
-    
-        [self showPreferencesWindow:nil];
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"anonymous"]) {
+        [self upgradeDefaults];
     }
     
     // Register global shortcuts
@@ -66,6 +56,33 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setMenu:statusMenu];
     [self setMenuImage: @"idle"];
+}
+
+- (void)assignDefaults {
+    LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
+    [launchController setLaunchAtLogin:YES];
+    
+    MASShortcut *gistifyCopiedText = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSShiftKeyMask|NSCommandKeyMask];
+    NSData *gistifyCopiedTextData = [NSKeyedArchiver archivedDataWithRootObject:gistifyCopiedText];
+    [[NSUserDefaults standardUserDefaults] setObject:gistifyCopiedTextData forKey:kGistifyGlobalShortcut];
+    
+    MASShortcut *gistifyCopiedTextAs = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSControlKeyMask|NSCommandKeyMask];
+    NSData *gistifyCopiedTextAsData = [NSKeyedArchiver archivedDataWithRootObject:gistifyCopiedTextAs];
+    [[NSUserDefaults standardUserDefaults] setObject:gistifyCopiedTextAsData forKey:kGistifyAsGlobalShortcut];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@".rb" forKey:@"format"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"Gist" forKey:@"service"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"true" forKey:@"anonymous"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"username"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"password"];
+    
+    [self showPreferencesWindow:nil];
+}
+
+- (void)upgradeDefaults {
+    [[NSUserDefaults standardUserDefaults] setObject:@"true" forKey:@"anonymous"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"username"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"password"];
 }
 
 - (void)rebindMenuHotkeys {
@@ -123,11 +140,9 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
     if (self.preferencesWindowController == nil)
     {
         self.generalPreferencesViewController = [[GeneralPreferencesViewController alloc] initWithNibName:@"GeneralPreferencesViewController" bundle:nil];
+        self.accountPreferencesViewController = [[AccountPreferencesViewController alloc] initWithNibName:@"AccountPreferencesViewController" bundle:nil];
         self.aboutPreferencesViewController = [[AboutPreferencesViewController alloc] initWithNibName:@"AboutPreferencesViewController" bundle:nil];
-        NSArray *controllers = [[NSArray alloc] initWithObjects:self.generalPreferencesViewController, [NSNull null], self.aboutPreferencesViewController, nil];
-        
-        // To add a flexible space between General and Advanced preference panes insert [NSNull null]:
-        //     NSArray *controllers = [[NSArray alloc] initWithObjects:generalViewController, [NSNull null], advancedViewController, nil];
+        NSArray *controllers = [[NSArray alloc] initWithObjects:self.generalPreferencesViewController, self.accountPreferencesViewController, [NSNull null], self.aboutPreferencesViewController, nil];
         
         NSString *title = NSLocalizedString(@"Preferences", @"Common title for Preferences window");
         self.preferencesWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title:title];

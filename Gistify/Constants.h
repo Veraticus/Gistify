@@ -17,4 +17,7 @@ FOUNDATION_EXPORT NSString *const kGistifyKeyPathShortcut;
 FOUNDATION_EXPORT NSString *const kGistifyAsGlobalShortcut;
 FOUNDATION_EXPORT NSString *const kGistifyAsKeyPathShortcut;
 
+FOUNDATION_EXPORT NSString *const kGistifyAppClientId;
+FOUNDATION_EXPORT NSString *const kGistifyAppClientSecret;
+
 FOUNDATION_EXPORT NSString *const kGistURL;

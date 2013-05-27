@@ -39,6 +39,9 @@
 		C261BB29174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB23174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted.png */; };
 		C261BB2A174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB24174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png */; };
 		C261BB2B174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB25174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png */; };
+		C261BB31174ED51600B972BF /* mini-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB30174ED51600B972BF /* mini-icon.png */; };
+		C261BB361752CA4800B972BF /* AccountPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB341752CA4800B972BF /* AccountPreferencesViewController.m */; };
+		C261BB371752CA4800B972BF /* AccountPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C261BB351752CA4800B972BF /* AccountPreferencesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +92,11 @@
 		C261BB23174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-transmitting-highlighted.png"; sourceTree = "<group>"; };
 		C261BB24174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-idle-highlighted@2x.png"; sourceTree = "<group>"; };
 		C261BB25174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-idle-highlighted.png"; sourceTree = "<group>"; };
+		C261BB30174ED51600B972BF /* mini-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-icon.png"; sourceTree = "<group>"; };
+		C261BB32174EF4F700B972BF /* Gistify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Gistify.entitlements; sourceTree = "<group>"; };
+		C261BB331752CA4800B972BF /* AccountPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountPreferencesViewController.h; sourceTree = "<group>"; };
+		C261BB341752CA4800B972BF /* AccountPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountPreferencesViewController.m; sourceTree = "<group>"; };
+		C261BB351752CA4800B972BF /* AccountPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountPreferencesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,7 @@
 		C2222B0F1745446D00F543AC /* Gistify */ = {
 			isa = PBXGroup;
 			children = (
+				C261BB32174EF4F700B972BF /* Gistify.entitlements */,
 				C2222B341745447800F543AC /* Assets */,
 				C2222B351745447D00F543AC /* Models */,
 				C2222B37174544A400F543AC /* Controllers */,
@@ -181,6 +190,7 @@
 		C2222B361745448700F543AC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C261BB30174ED51600B972BF /* mini-icon.png */,
 				C261BB20174ED1EE00B972BF /* menubar-clipboard-complete-highlighted.png */,
 				C261BB21174ED1EE00B972BF /* menubar-clipboard-complete-highlighted@2x.png */,
 				C261BB22174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted@2x.png */,
@@ -200,6 +210,8 @@
 		C2222B37174544A400F543AC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C261BB331752CA4800B972BF /* AccountPreferencesViewController.h */,
+				C261BB341752CA4800B972BF /* AccountPreferencesViewController.m */,
 				C2222B1B1745446D00F543AC /* GeneralPreferencesViewController.h */,
 				C2222B1C1745446D00F543AC /* GeneralPreferencesViewController.m */,
 				C2222B221745446D00F543AC /* LaunchAtLoginController.h */,
@@ -215,6 +227,7 @@
 		C2222B38174544B600F543AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C261BB351752CA4800B972BF /* AccountPreferencesViewController.xib */,
 				C2222B1D1745446D00F543AC /* GeneralPreferencesViewController.xib */,
 				C2222B191745446D00F543AC /* MainMenu.xib */,
 				C20039AC1746C53B00C668E6 /* ModalWindowController.xib */,
@@ -310,6 +323,8 @@
 				C261BB29174ED1EE00B972BF /* menubar-clipboard-transmitting-highlighted.png in Resources */,
 				C261BB2A174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png in Resources */,
 				C261BB2B174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png in Resources */,
+				C261BB31174ED51600B972BF /* mini-icon.png in Resources */,
+				C261BB371752CA4800B972BF /* AccountPreferencesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +376,7 @@
 				C20039AD1746C53C00C668E6 /* ModalWindowController.m in Sources */,
 				C20039B1174702D800C668E6 /* ModalWindow.m in Sources */,
 				C20039B5174A855C00C668E6 /* AboutPreferencesViewController.m in Sources */,
+				C261BB361752CA4800B972BF /* AccountPreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Joshua Symonds (965D78F3GT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -423,6 +440,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "73BBE4EB-12B0-4895-B4F2-5C82DDB23841";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -440,6 +458,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Joshua Symonds (965D78F3GT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -449,6 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PROVISIONING_PROFILE = "73BBE4EB-12B0-4895-B4F2-5C82DDB23841";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -457,11 +477,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B7B248649E6041588A1C270A /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Gistify/Gistify.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Joshua Symonds (965D78F3GT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gistify/Gistify-Prefix.pch";
 				INFOPLIST_FILE = "Gistify/Gistify-Info.plist";
 				PRODUCT_NAME = Gistify;
+				PROVISIONING_PROFILE = "EA1D7E24-B027-431F-99B9-0350284B81CD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -470,11 +493,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B7B248649E6041588A1C270A /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Gistify/Gistify.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Joshua Symonds (965D78F3GT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gistify/Gistify-Prefix.pch";
 				INFOPLIST_FILE = "Gistify/Gistify-Info.plist";
 				PRODUCT_NAME = Gistify;
+				PROVISIONING_PROFILE = "EA1D7E24-B027-431F-99B9-0350284B81CD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

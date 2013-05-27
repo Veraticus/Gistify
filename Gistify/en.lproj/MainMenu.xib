@@ -63,6 +63,16 @@
 						<reference key="NSOnImage" ref="1063618800"/>
 						<reference key="NSMixedImage" ref="294061943"/>
 					</object>
+					<object class="NSMenuItem" id="1007133000">
+						<reference key="NSMenu" ref="206620471"/>
+						<bool key="NSIsDisabled">YES</bool>
+						<bool key="NSIsSeparator">YES</bool>
+						<string key="NSTitle"/>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="1063618800"/>
+						<reference key="NSMixedImage" ref="294061943"/>
+					</object>
 					<object class="NSMenuItem" id="542244491">
 						<reference key="NSMenu" ref="206620471"/>
 						<string key="NSTitle">Preferences...</string>
@@ -204,6 +214,7 @@
 							<reference ref="513260433"/>
 							<reference ref="922473697"/>
 							<reference ref="1018011098"/>
+							<reference ref="1007133000"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -232,6 +243,11 @@
 						<reference key="object" ref="1018011098"/>
 						<reference key="parent" ref="206620471"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">572</int>
+						<reference key="object" ref="1007133000"/>
+						<reference key="parent" ref="206620471"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -246,12 +262,13 @@
 				<string key="562.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="563.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="564.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="572.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">571</int>
+			<int key="maxID">572</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
