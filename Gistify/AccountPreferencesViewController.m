@@ -71,45 +71,22 @@
 - (void)setupLoginWindow {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"token"] == nil) {
         self.usernameField.stringValue = @"";
-        
         self.passwordField.stringValue = @"";
+        self.usernameField.enabled = YES;
+        self.passwordField.enabled = YES;
         
         self.button.title = @"Login";
+        
+        [[self.radioButtons cellWithTag:0] setEnabled:NO];
     } else {
         self.usernameField.stringValue = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-        
         self.passwordField.stringValue = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
-        
-        self.button.title = @"Logout";
-    }
-    
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"anonymous"] isEqualToString:@"true"]) {
-        self.usernameLabel.textColor = [NSColor disabledControlTextColor];
-        self.usernameLabel.enabled = NO;
         self.usernameField.enabled = NO;
-        
-        self.passwordLabel.textColor = [NSColor disabledControlTextColor];
-        self.passwordLabel.enabled = NO;
         self.passwordField.enabled = NO;
         
-        self.button.enabled = NO;
-    } else {
-        self.usernameLabel.textColor = [NSColor controlTextColor];
-        self.usernameLabel.enabled = YES;
-        
-        self.passwordLabel.textColor = [NSColor controlTextColor];
-        self.passwordLabel.enabled = YES;
-        
-        self.button.enabled = YES;
-        
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"token"] == nil) {
-            self.usernameField.enabled = YES;
-            self.passwordField.enabled = YES;
-        } else {
-            self.usernameField.enabled = NO;
-            self.passwordField.enabled = NO;
-        }
-    }    
+        self.button.title = @"Logout";
+        [[self.radioButtons cellWithTag:0] setEnabled:YES];
+    }
 }
 
 #pragma mark MASPreferencesViewController
