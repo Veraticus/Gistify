@@ -54,6 +54,13 @@
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
         [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"username"];
         [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"password"];
+        
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"OK"];
+        [alert setMessageText:@"You are logged out."];
+        [alert runModal];
+
+        
         [self setupLoginWindow];
     }
 }
@@ -78,6 +85,7 @@
         self.button.title = @"Login";
         
         [[self.radioButtons cellWithTag:0] setEnabled:NO];
+        [self.radioButtons selectCellWithTag:1];
     } else {
         self.usernameField.stringValue = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
         self.passwordField.stringValue = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
