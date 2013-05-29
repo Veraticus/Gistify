@@ -63,7 +63,7 @@
 						<reference key="NSOnImage" ref="1063618800"/>
 						<reference key="NSMixedImage" ref="294061943"/>
 					</object>
-					<object class="NSMenuItem" id="964408237">
+					<object class="NSMenuItem" id="1034420755">
 						<reference key="NSMenu" ref="206620471"/>
 						<bool key="NSIsDisabled">YES</bool>
 						<bool key="NSIsSeparator">YES</bool>
@@ -74,25 +74,6 @@
 						<reference key="NSMixedImage" ref="294061943"/>
 					</object>
 					<object class="NSMenuItem" id="542244491">
-						<reference key="NSMenu" ref="206620471"/>
-						<bool key="NSIsDisabled">YES</bool>
-						<string key="NSTitle">No recent gists</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="1063618800"/>
-						<reference key="NSMixedImage" ref="294061943"/>
-					</object>
-					<object class="NSMenuItem" id="41278113">
-						<reference key="NSMenu" ref="206620471"/>
-						<bool key="NSIsDisabled">YES</bool>
-						<bool key="NSIsSeparator">YES</bool>
-						<string key="NSTitle"/>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="1063618800"/>
-						<reference key="NSMixedImage" ref="294061943"/>
-					</object>
-					<object class="NSMenuItem" id="89153850">
 						<reference key="NSMenu" ref="206620471"/>
 						<string key="NSTitle">Preferences...</string>
 						<string key="NSKeyEquiv"/>
@@ -183,7 +164,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">showPreferencesWindow:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="89153850"/>
+						<reference key="destination" ref="542244491"/>
 					</object>
 					<int key="connectionID">574</int>
 				</object>
@@ -228,21 +209,14 @@
 						<int key="objectID">552</int>
 						<reference key="object" ref="206620471"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="542244491"/>
 							<reference ref="17568168"/>
 							<reference ref="513260433"/>
 							<reference ref="922473697"/>
 							<reference ref="1018011098"/>
-							<reference ref="964408237"/>
-							<reference ref="89153850"/>
-							<reference ref="41278113"/>
+							<reference ref="542244491"/>
+							<reference ref="1034420755"/>
 						</array>
 						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">553</int>
-						<reference key="object" ref="542244491"/>
-						<reference key="parent" ref="206620471"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">556</int>
@@ -265,18 +239,13 @@
 						<reference key="parent" ref="206620471"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">572</int>
-						<reference key="object" ref="964408237"/>
-						<reference key="parent" ref="206620471"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">573</int>
-						<reference key="object" ref="89153850"/>
+						<reference key="object" ref="542244491"/>
 						<reference key="parent" ref="206620471"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">575</int>
-						<reference key="object" ref="41278113"/>
+						<reference key="object" ref="1034420755"/>
 						<reference key="parent" ref="206620471"/>
 					</object>
 				</array>
@@ -288,12 +257,10 @@
 				<string key="420.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="494.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="552.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="553.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="556.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="562.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="563.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="564.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="572.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="573.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="575.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
