@@ -31,7 +31,7 @@
     
     [[NSApp mainWindow] close];
     [NSApp activateIgnoringOtherApps:YES];
-    [self.modalWindowController.window makeKeyAndOrderFront:self.modalWindowController];
+    [self.modalWindowController.window makeKeyAndOrderFront:self];
 }
 
 - (NSString *)retrieveExtension {

@@ -42,6 +42,7 @@
 		C261BB31174ED51600B972BF /* mini-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB30174ED51600B972BF /* mini-icon.png */; };
 		C261BB361752CA4800B972BF /* AccountPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB341752CA4800B972BF /* AccountPreferencesViewController.m */; };
 		C261BB371752CA4800B972BF /* AccountPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C261BB351752CA4800B972BF /* AccountPreferencesViewController.xib */; };
+		C261BB3C1768D69C00B972BF /* NSApplicationWithOverrides.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB3B1768D69C00B972BF /* NSApplicationWithOverrides.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,8 @@
 		C261BB331752CA4800B972BF /* AccountPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountPreferencesViewController.h; sourceTree = "<group>"; };
 		C261BB341752CA4800B972BF /* AccountPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountPreferencesViewController.m; sourceTree = "<group>"; };
 		C261BB351752CA4800B972BF /* AccountPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountPreferencesViewController.xib; sourceTree = "<group>"; };
+		C261BB3A1768D69C00B972BF /* NSApplicationWithOverrides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSApplicationWithOverrides.h; sourceTree = "<group>"; };
+		C261BB3B1768D69C00B972BF /* NSApplicationWithOverrides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSApplicationWithOverrides.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				C261BB32174EF4F700B972BF /* Gistify.entitlements */,
+				C261BB391768D68700B972BF /* Extensions */,
 				C2222B341745447800F543AC /* Assets */,
 				C2222B351745447D00F543AC /* Models */,
 				C2222B37174544A400F543AC /* Controllers */,
@@ -248,6 +252,15 @@
 				C2222B241745446D00F543AC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C261BB391768D68700B972BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C261BB3A1768D69C00B972BF /* NSApplicationWithOverrides.h */,
+				C261BB3B1768D69C00B972BF /* NSApplicationWithOverrides.m */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +390,7 @@
 				C20039B1174702D800C668E6 /* ModalWindow.m in Sources */,
 				C20039B5174A855C00C668E6 /* AboutPreferencesViewController.m in Sources */,
 				C261BB361752CA4800B972BF /* AccountPreferencesViewController.m in Sources */,
+				C261BB3C1768D69C00B972BF /* NSApplicationWithOverrides.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

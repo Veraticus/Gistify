@@ -43,6 +43,7 @@ static NSString *const PreferencesKeyForViewBounds (NSString *identifier)
         _minimumViewRects = [[NSMutableDictionary alloc] init];
         _title = [title copy];
     }
+        
     return self;
 }
 
@@ -95,6 +96,12 @@ static NSString *const PreferencesKeyForViewBounds (NSString *identifier)
     NSViewController <MASPreferencesViewController> *viewController = self.selectedViewController;
     if (viewController)
         [[NSUserDefaults standardUserDefaults] setObject:NSStringFromRect([viewController.view bounds]) forKey:PreferencesKeyForViewBounds(viewController.identifier)];
+}
+
+- (void)windowWillClose:(NSNotification *)notification
+{
+    ProcessSerialNumber psn = { 0, kCurrentProcess };
+    TransformProcessType(&psn, kProcessTransformToUIElementApplication);
 }
 
 #pragma mark -

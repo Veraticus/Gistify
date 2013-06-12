@@ -150,10 +150,12 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
         self.preferencesWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title:title];
     }
     
+    ProcessSerialNumber psn = { 0, kCurrentProcess };
+    TransformProcessType(&psn, kProcessTransformToForegroundApplication);
     [[NSApp mainWindow] close];
     
-    [self.preferencesWindowController showWindow:nil];
     [NSApp activateIgnoringOtherApps:YES];
+    [self.preferencesWindowController.window makeKeyAndOrderFront:self];
 }
 
 - (IBAction)gistifyCopiedTextMenuItem:(id)sender {
