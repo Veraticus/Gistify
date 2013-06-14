@@ -28,20 +28,56 @@
         
         // Register global shortcuts
         [MASShortcut registerGlobalShortcutWithUserDefaultsKey:kGistifyGlobalShortcut handler:^{
-            if (_isGistifyAsShorcutActive) {
+            if (_isGistifyShorcutActive) {
                 [[Gist singleton] pasteDefaultClipboard];
             }
         }];
         
         [MASShortcut registerGlobalShortcutWithUserDefaultsKey:kGistifyAsGlobalShortcut handler:^{
-            if (_isGistifyShorcutActive) {
+            if (_isGistifyAsShorcutActive) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"openModal" object:nil];;
             }
         }];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enableGistifyShortcut) name:@"enableGistifyShortcut" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(disableGistifyShortcut) name:@"disableGistifyShortcut" object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enableGistifyAsShortcut) name:@"enableGistifyAsShortcut" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(disableGistifyAsShortcut) name:@"disableGistifyAsShortcut" object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enableShortcuts) name:@"enableShortcuts" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(disableShortcuts) name:@"disableShortcuts" object:nil];
 
     }
     return self;
 }
 
+#pragma mark Shortcut Control
+
+-(void) enableGistifyShortcut {
+    _isGistifyShorcutActive = YES;
+}
+
+-(void) disableGistifyShortcut {
+    _isGistifyShorcutActive = NO;
+}
+
+-(void) enableGistifyAsShortcut {
+    _isGistifyAsShorcutActive = YES;
+}
+
+-(void) disableGistifyAsShortcut {
+    _isGistifyAsShorcutActive = NO;
+}
+
+-(void) enableShortcuts {
+    _isGistifyShorcutActive = YES;
+    _isGistifyAsShorcutActive = YES;
+}
+
+-(void) disableShortcuts {
+    _isGistifyShorcutActive = NO;
+    _isGistifyAsShorcutActive = NO;
+}
 
 @end

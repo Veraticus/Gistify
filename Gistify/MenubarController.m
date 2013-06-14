@@ -62,8 +62,7 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
 {
     if (ctx == kGistifyShortcutContext) {
         [self rebindHotkeys];
-    }
-    else {
+    } else {
         [super observeValueForKeyPath:keyPath ofObject:obj change:change context:ctx];
     }
 }

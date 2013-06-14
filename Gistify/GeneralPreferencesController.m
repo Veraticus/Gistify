@@ -17,6 +17,14 @@
     
     self.gistifyCopiedTextView.associatedUserDefaultsKey = kGistifyGlobalShortcut;
     self.gistifyCopiedTextAsView.associatedUserDefaultsKey = kGistifyAsGlobalShortcut;
+    
+    [self.gistifyCopiedTextView addObserver:self forKeyPath:@"recording"
+                                    options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
+                                    context:nil];
+    
+    [self.gistifyCopiedTextAsView addObserver:self.gistifyCopiedTextAsView forKeyPath:@"recording"
+                                      options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
+                                      context:nil];
 }
 
 - (void)controlTextDidChange:(NSNotification *)notification {
@@ -28,6 +36,21 @@
         [[NSUserDefaults standardUserDefaults] setValue:@"secret" forKey:@"visibility"];
     } else {
         [[NSUserDefaults standardUserDefaults] setValue:@"public" forKey:@"visibility"];
+    }
+}
+
+#pragma mark KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    
+    if ([keyPath isEqual:@"recording"]) {
+        if ([[change objectForKey:NSKeyValueChangeNewKey] boolValue] == YES) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"disableShortcuts" object:nil userInfo:nil];
+        } else {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"enableShortcuts" object:nil userInfo:nil];
+        }
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
 

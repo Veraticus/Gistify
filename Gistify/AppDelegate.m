@@ -23,15 +23,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // First-time setup
-    if (![[NSUserDefaults standardUserDefaults] objectForKey:kGistifyGlobalShortcut]) {
-        [self assignDefaults];
-    }
-    
-    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"anonymous"]) {
-        [self upgradeDefaults];
-    }
-
     // Create preferences pane
     _preferencesController = [[PreferencesController alloc] init];
     
@@ -42,7 +33,16 @@
     _menubarController = [[MenubarController alloc] init];
     
     // Setup modal
-    _modalController = [[ModalController alloc] initWithWindowNibName:@"ModalWindow"];
+    _modalController = [[ModalController alloc] initWithWindowNibName:@"Modal"];
+ 
+    // First-time setup
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:kGistifyGlobalShortcut]) {
+        [self assignDefaults];
+   }
+    
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"anonymous"]) {
+        [self upgradeDefaults];
+    }
     
     // Register for notifications
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
@@ -61,9 +61,9 @@
     [[NSUserDefaults standardUserDefaults] setObject:gistifyCopiedTextAsData forKey:kGistifyAsGlobalShortcut];
     
     [[NSUserDefaults standardUserDefaults] setObject:@".rb" forKey:@"format"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"Gist" forKey:@"service"];
     [[NSUserDefaults standardUserDefaults] setObject:@"true" forKey:@"anonymous"];
     [[NSUserDefaults standardUserDefaults] setObject:@"public" forKey:@"visibility"];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"username"];
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"password"];
     
@@ -73,6 +73,7 @@
 - (void)upgradeDefaults {
     [[NSUserDefaults standardUserDefaults] setObject:@"true" forKey:@"anonymous"];
     [[NSUserDefaults standardUserDefaults] setObject:@"public" forKey:@"visibility"];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"username"];
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"password"];
 }

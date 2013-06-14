@@ -47,6 +47,7 @@
 		C261BB47176A595400B972BF /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB46176A595400B972BF /* PreferencesController.m */; };
 		C261BB4A176A5F1F00B972BF /* ShortcutsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB49176A5F1F00B972BF /* ShortcutsController.m */; };
 		C261BB4C176A663600B972BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C261BB4B176A663600B972BF /* MainMenu.xib */; };
+		C261BB4E176B64A400B972BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C261BB4D176B64A300B972BF /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		C261BB48176A5F1F00B972BF /* ShortcutsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortcutsController.h; sourceTree = "<group>"; };
 		C261BB49176A5F1F00B972BF /* ShortcutsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortcutsController.m; sourceTree = "<group>"; };
 		C261BB4B176A663600B972BF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		C261BB4D176B64A300B972BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C261BB4E176B64A400B972BF /* SystemConfiguration.framework in Frameworks */,
 				C2222AD5174436D500F543AC /* Cocoa.framework in Frameworks */,
 				122892F07873472CB89FB6AC /* libPods.a in Frameworks */,
 			);
@@ -157,6 +160,7 @@
 		C2222AD6174436D500F543AC /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C261BB4D176B64A300B972BF /* SystemConfiguration.framework */,
 				C2222AD7174436D500F543AC /* AppKit.framework */,
 				C2222AD8174436D500F543AC /* CoreData.framework */,
 				C2222AD9174436D500F543AC /* Foundation.framework */,

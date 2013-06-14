@@ -19,4 +19,11 @@
 @property (nonatomic) BOOL isGistifyShortcutActive;
 @property (nonatomic) BOOL isGistifyAsShortcutActive;
 
+-(void) enableGistifyShortcut;
+-(void) disableGistifyShortcut;
+-(void) enableGistifyAsShortcut;
+-(void) disableGistifyAsShortcut;
+-(void) enableShortcuts;
+-(void) disableShortcuts;
+
 @end
