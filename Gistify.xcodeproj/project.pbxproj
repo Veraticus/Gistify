@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		122892F07873472CB89FB6AC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C9558A27C1403EB3B7DD39 /* libPods.a */; };
-		C20039A91745CC2300C668E6 /* Paste.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039A81745CC2300C668E6 /* Paste.m */; };
-		C20039AD1746C53C00C668E6 /* ModalWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039AB1746C53B00C668E6 /* ModalWindowController.m */; };
-		C20039AE1746C53C00C668E6 /* ModalWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039AC1746C53B00C668E6 /* ModalWindow.xib */; };
+		C20039AD1746C53C00C668E6 /* ModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039AB1746C53B00C668E6 /* ModalController.m */; };
+		C20039AE1746C53C00C668E6 /* Modal.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039AC1746C53B00C668E6 /* Modal.xib */; };
 		C20039B1174702D800C668E6 /* ModalWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039B0174702D800C668E6 /* ModalWindow.m */; };
 		C20039B5174A855C00C668E6 /* AboutPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039B3174A855C00C668E6 /* AboutPreferencesController.m */; };
 		C20039B6174A855C00C668E6 /* AboutPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039B4174A855C00C668E6 /* AboutPreferencesView.xib */; };
@@ -53,11 +52,9 @@
 /* Begin PBXFileReference section */
 		98C9558A27C1403EB3B7DD39 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B248649E6041588A1C270A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		C20039A71745CC2300C668E6 /* Paste.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paste.h; sourceTree = "<group>"; };
-		C20039A81745CC2300C668E6 /* Paste.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Paste.m; sourceTree = "<group>"; };
-		C20039AA1746C53B00C668E6 /* ModalWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalWindowController.h; sourceTree = "<group>"; };
-		C20039AB1746C53B00C668E6 /* ModalWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalWindowController.m; sourceTree = "<group>"; };
-		C20039AC1746C53B00C668E6 /* ModalWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalWindow.xib; sourceTree = "<group>"; };
+		C20039AA1746C53B00C668E6 /* ModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalController.h; sourceTree = "<group>"; };
+		C20039AB1746C53B00C668E6 /* ModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalController.m; sourceTree = "<group>"; };
+		C20039AC1746C53B00C668E6 /* Modal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Modal.xib; sourceTree = "<group>"; };
 		C20039AF174702D800C668E6 /* ModalWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalWindow.h; sourceTree = "<group>"; };
 		C20039B0174702D800C668E6 /* ModalWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalWindow.m; sourceTree = "<group>"; };
 		C20039B2174A855C00C668E6 /* AboutPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPreferencesController.h; sourceTree = "<group>"; };
@@ -199,8 +196,6 @@
 			children = (
 				C2222B1E1745446D00F543AC /* Gist.h */,
 				C2222B1F1745446D00F543AC /* Gist.m */,
-				C20039A71745CC2300C668E6 /* Paste.h */,
-				C20039A81745CC2300C668E6 /* Paste.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -231,8 +226,8 @@
 				C261BB43176A575D00B972BF /* Preferences */,
 				C2222B221745446D00F543AC /* LaunchAtLoginController.h */,
 				C2222B231745446D00F543AC /* LaunchAtLoginController.m */,
-				C20039AA1746C53B00C668E6 /* ModalWindowController.h */,
-				C20039AB1746C53B00C668E6 /* ModalWindowController.m */,
+				C20039AA1746C53B00C668E6 /* ModalController.h */,
+				C20039AB1746C53B00C668E6 /* ModalController.m */,
 				C261BB40176A568100B972BF /* MenubarController.h */,
 				C261BB41176A568100B972BF /* MenubarController.m */,
 				C261BB45176A595400B972BF /* PreferencesController.h */,
@@ -248,7 +243,7 @@
 			children = (
 				C261BB44176A590B00B972BF /* Preferences */,
 				C2222B191745446D00F543AC /* Menubar.xib */,
-				C20039AC1746C53B00C668E6 /* ModalWindow.xib */,
+				C20039AC1746C53B00C668E6 /* Modal.xib */,
 				C20039AF174702D800C668E6 /* ModalWindow.h */,
 				C20039B0174702D800C668E6 /* ModalWindow.m */,
 				C261BB3D176A4B9F00B972BF /* StatusItemView.h */,
@@ -360,7 +355,7 @@
 				C2222B2C1745446D00F543AC /* Menubar.xib in Resources */,
 				C2222B2E1745446D00F543AC /* GeneralPreferencesView.xib in Resources */,
 				C2222B301745446D00F543AC /* Gistify-Info.plist in Resources */,
-				C20039AE1746C53C00C668E6 /* ModalWindow.xib in Resources */,
+				C20039AE1746C53C00C668E6 /* Modal.xib in Resources */,
 				C20039B6174A855C00C668E6 /* AboutPreferencesView.xib in Resources */,
 				C261BB0F174EC79000B972BF /* Gistify.iconset in Resources */,
 				C261BB18174EC89500B972BF /* menubar-clipboard-transmitting@2x.png in Resources */,
@@ -425,8 +420,7 @@
 				C2222B2F1745446D00F543AC /* Gist.m in Sources */,
 				C2222B311745446D00F543AC /* LaunchAtLoginController.m in Sources */,
 				C2222B321745446D00F543AC /* main.m in Sources */,
-				C20039A91745CC2300C668E6 /* Paste.m in Sources */,
-				C20039AD1746C53C00C668E6 /* ModalWindowController.m in Sources */,
+				C20039AD1746C53C00C668E6 /* ModalController.m in Sources */,
 				C20039B1174702D800C668E6 /* ModalWindow.m in Sources */,
 				C20039B5174A855C00C668E6 /* AboutPreferencesController.m in Sources */,
 				C261BB361752CA4800B972BF /* AccountPreferencesController.m in Sources */,

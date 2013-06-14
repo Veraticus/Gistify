@@ -8,8 +8,8 @@
 
 #import "MenubarController.h"
 #import "MASShortcut.h"
-#import "Paste.h"
 #import "Constants.h"
+#import "Gist.h"
 #import "StatusItemView.h"
 
 @implementation MenubarController
@@ -108,10 +108,10 @@ void *kGistifyShortcutContext = &kGistifyShortcutContext;
 }
 
 - (IBAction)gistifyCopiedTextMenuItem:(id)sender {
-    [[Paste singleton] sendToService];
+    [[Gist singleton] pasteDefaultClipboard];
 }
 
 - (IBAction)gistifyCopiedTextAsMenuItem:(id)sender {
-    [[Paste singleton] openModal];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"openModal" object:nil];
 }
 @end

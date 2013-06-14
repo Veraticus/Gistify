@@ -33,7 +33,7 @@
 		</object>
 		<array class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
 			<object class="NSCustomObject" id="1001">
-				<string key="NSClassName">ModalWindowController</string>
+				<string key="NSClassName">ModalController</string>
 			</object>
 			<object class="NSCustomObject" id="1003">
 				<string key="NSClassName">FirstResponder</string>
@@ -162,7 +162,6 @@
 							<string key="NSFrame">{{552, 13}, {14, 32}}</string>
 							<reference key="NSSuperview" ref="478034545"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="450192763">
@@ -202,28 +201,29 @@
 								<string key="NSKeyEquivalent"/>
 								<int key="NSPeriodicDelay">400</int>
 								<int key="NSPeriodicInterval">75</int>
-								<nil key="NSMenuItem"/>
+								<object class="NSMenuItem" key="NSMenuItem" id="344730471">
+									<reference key="NSMenu" ref="252488722"/>
+									<string key="NSTitle">Public</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSKeyEquivModMask">1048576</int>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<int key="NSState">1</int>
+									<object class="NSCustomResource" key="NSOnImage" id="49866317">
+										<string key="NSClassName">NSImage</string>
+										<string key="NSResourceName">NSMenuCheckmark</string>
+									</object>
+									<object class="NSCustomResource" key="NSMixedImage" id="731474912">
+										<string key="NSClassName">NSImage</string>
+										<string key="NSResourceName">NSMenuMixedState</string>
+									</object>
+									<string key="NSAction">_popUpItemAction:</string>
+									<reference key="NSTarget" ref="106297053"/>
+								</object>
 								<bool key="NSMenuItemRespectAlignment">YES</bool>
 								<object class="NSMenu" key="NSMenu" id="252488722">
 									<string key="NSTitle">OtherViews</string>
 									<array class="NSMutableArray" key="NSMenuItems">
-										<object class="NSMenuItem" id="344730471">
-											<reference key="NSMenu" ref="252488722"/>
-											<string key="NSTitle">Public</string>
-											<string key="NSKeyEquiv"/>
-											<int key="NSKeyEquivModMask">1048576</int>
-											<int key="NSMnemonicLoc">2147483647</int>
-											<object class="NSCustomResource" key="NSOnImage" id="49866317">
-												<string key="NSClassName">NSImage</string>
-												<string key="NSResourceName">NSMenuCheckmark</string>
-											</object>
-											<object class="NSCustomResource" key="NSMixedImage" id="731474912">
-												<string key="NSClassName">NSImage</string>
-												<string key="NSResourceName">NSMenuMixedState</string>
-											</object>
-											<string key="NSAction">_popUpItemAction:</string>
-											<reference key="NSTarget" ref="106297053"/>
-										</object>
+										<reference ref="344730471"/>
 										<object class="NSMenuItem" id="674756716">
 											<reference key="NSMenu" ref="252488722"/>
 											<string key="NSTitle">Secret</string>
@@ -267,22 +267,23 @@
 								<string key="NSKeyEquivalent"/>
 								<int key="NSPeriodicDelay">400</int>
 								<int key="NSPeriodicInterval">75</int>
-								<nil key="NSMenuItem"/>
+								<object class="NSMenuItem" key="NSMenuItem" id="883238788">
+									<reference key="NSMenu" ref="489349356"/>
+									<string key="NSTitle">Anonymous</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSKeyEquivModMask">1048576</int>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<int key="NSState">1</int>
+									<reference key="NSOnImage" ref="49866317"/>
+									<reference key="NSMixedImage" ref="731474912"/>
+									<string key="NSAction">_popUpItemAction:</string>
+									<reference key="NSTarget" ref="640733035"/>
+								</object>
 								<bool key="NSMenuItemRespectAlignment">YES</bool>
 								<object class="NSMenu" key="NSMenu" id="489349356">
 									<string key="NSTitle">OtherViews</string>
 									<array class="NSMutableArray" key="NSMenuItems">
-										<object class="NSMenuItem" id="883238788">
-											<reference key="NSMenu" ref="489349356"/>
-											<string key="NSTitle">Anonymous</string>
-											<string key="NSKeyEquiv"/>
-											<int key="NSKeyEquivModMask">1048576</int>
-											<int key="NSMnemonicLoc">2147483647</int>
-											<reference key="NSOnImage" ref="49866317"/>
-											<reference key="NSMixedImage" ref="731474912"/>
-											<string key="NSAction">_popUpItemAction:</string>
-											<reference key="NSTarget" ref="640733035"/>
-										</object>
+										<reference ref="883238788"/>
 										<object class="NSMenuItem" id="188460006">
 											<reference key="NSMenu" ref="489349356"/>
 											<string key="NSTitle">GitHub Account</string>
@@ -319,14 +320,6 @@
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<array class="NSMutableArray" key="connectionRecords">
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">window</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="180269429"/>
-					</object>
-					<int key="connectionID">160</int>
-				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">closeWindow:</string>
@@ -385,11 +378,27 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
+						<string key="label">window</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="180269429"/>
+					</object>
+					<int key="connectionID">240</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">gistFormat</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="472851955"/>
+					</object>
+					<int key="connectionID">241</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="180269429"/>
 						<reference key="destination" ref="1001"/>
 					</object>
-					<int key="connectionID">238</int>
+					<int key="connectionID">239</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1002,20 +1011,12 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">238</int>
+			<int key="maxID">241</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">ModalWindow</string>
-					<string key="superclassName">NSWindow</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/ModalWindow.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">ModalWindowController</string>
+					<string key="className">ModalController</string>
 					<string key="superclassName">NSWindowController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="changeAnonymous:">id</string>
@@ -1043,7 +1044,7 @@
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="anonymous">NSPopUpButton</string>
-						<string key="pasteFormat">NSTextField</string>
+						<string key="gistFormat">NSTextField</string>
 						<string key="visibility">NSPopUpButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -1051,8 +1052,8 @@
 							<string key="name">anonymous</string>
 							<string key="candidateClassName">NSPopUpButton</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="pasteFormat">
-							<string key="name">pasteFormat</string>
+						<object class="IBToOneOutletInfo" key="gistFormat">
+							<string key="name">gistFormat</string>
 							<string key="candidateClassName">NSTextField</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="visibility">
@@ -1062,7 +1063,15 @@
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/ModalWindowController.h</string>
+						<string key="minorKey">./Classes/ModalController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">ModalWindow</string>
+					<string key="superclassName">NSWindow</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/ModalWindow.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

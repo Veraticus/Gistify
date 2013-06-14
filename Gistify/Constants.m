@@ -1,6 +1,6 @@
 //
 //  Constants.m
-//  PasteAway
+//  Gistify
 //
 //  Created by Josh Symonds on 5/16/13.
 //  Copyright (c) 2013 Josh Symonds. All rights reserved.

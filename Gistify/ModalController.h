@@ -7,9 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Paste.h"
 
-@interface ModalWindowController : NSWindowController <NSWindowDelegate>
+@interface ModalController : NSWindowController <NSWindowDelegate>
 
 @property (assign) IBOutlet NSTextField *pasteFormat;
 @property (assign) IBOutlet NSPopUpButton *visibility;

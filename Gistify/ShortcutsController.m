@@ -29,13 +29,13 @@
         // Register global shortcuts
         [MASShortcut registerGlobalShortcutWithUserDefaultsKey:kGistifyGlobalShortcut handler:^{
             if (_isGistifyAsShorcutActive) {
-                [[Paste singleton] sendToService];
+                [[Gist singleton] pasteDefaultClipboard];
             }
         }];
         
         [MASShortcut registerGlobalShortcutWithUserDefaultsKey:kGistifyAsGlobalShortcut handler:^{
             if (_isGistifyShorcutActive) {
-                [[Paste singleton] openModal];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"openModal" object:nil];;
             }
         }];
 

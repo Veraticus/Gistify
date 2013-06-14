@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  PasteAway
+//  Gistify
 //
 //  Created by Josh Symonds on 5/15/13.
 //  Copyright (c) 2013 Josh Symonds. All rights reserved.
@@ -10,6 +10,7 @@
 #import "MenubarController.h"
 #import "PreferencesController.h"
 #import "ShortcutsController.h"
+#import "ModalController.h"
 #import "LaunchAtLoginController.h"
 #import "Constants.h"
 #import "Paste.h"
@@ -19,6 +20,7 @@
 @synthesize preferencesController = _preferencesController;
 @synthesize shortcutsController = _shortcutsController;
 @synthesize menubarController = _menubarController;
+@synthesize modalController = _modalController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -39,6 +41,9 @@
     
     // Setup menu
     _menubarController = [[MenubarController alloc] init];
+    
+    // Setup modal
+    _modalController = [[ModalController alloc] initWithWindowNibName:@"ModalWindow"];
     
     // Register for notifications
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
@@ -63,7 +68,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"username"];
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"password"];
     
-    [self showPreferencesWindow:nil];
+    [_preferencesController openPreferences];
 }
 
 - (void)upgradeDefaults {
@@ -75,22 +80,6 @@
 
 - (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification{
     return YES;
-}
-
-- (IBAction)exitApplication:(id)sender {
-    [NSApp terminate:nil];
-}
-
-- (IBAction)showPreferencesWindow:(id)sender {
-    [_preferencesController openPreferences];
-}
-
-- (IBAction)gistifyCopiedTextMenuItem:(id)sender {
-    [[Paste singleton] sendToService];
-}
-
-- (IBAction)gistifyCopiedTextAsMenuItem:(id)sender {
-    [[Paste singleton] openModal];
 }
 
 @end

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  PasteAway
+//  Gistify
 //
 //  Created by Josh Symonds on 5/15/13.
 //  Copyright (c) 2013 Josh Symonds. All rights reserved.
@@ -11,17 +11,20 @@
 @class PreferencesController;
 @class ShortcutsController;
 @class MenubarController;
+@class ModalController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
 @private
     PreferencesController *_preferencesController;
     ShortcutsController *_shortcutsController;
     MenubarController *_menubarController;
+    ModalController *_modalController;
 }
 
 @property (nonatomic, retain) PreferencesController *preferencesController;
 @property (nonatomic, retain) ShortcutsController *shortcutsController;
 @property (nonatomic, retain) MenubarController *menubarController;
+@property (nonatomic, retain) ModalController *modalController;
 
 - (void)assignDefaults;
 - (void)upgradeDefaults;

@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'PasteAway' target in the 'PasteAway' project
+// Prefix header for all source files of the 'Gistify' target in the 'Gistify' project
 //
 
 #ifdef __OBJC__

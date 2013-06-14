@@ -6,9 +6,26 @@
 //  Copyright (c) 2013 Josh Symonds. All rights reserved.
 //
 
-#import "ModalWindowController.h"
+#import "ModalController.h"
+#import "Gist.h"
 
-@implementation ModalWindowController
+@implementation ModalController
+
+-(id)initWithWindowNibName:(NSString *)nibName {
+    self = [super initWithWindowNibName:nibName];
+    if (self != nil) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openModal) name:@"openModal" object:nil];
+    }
+    return self;
+}
+
+- (void) openModal {
+    [[NSApp mainWindow] close];
+    [NSApp activateIgnoringOtherApps:YES];
+    [self.window makeKeyAndOrderFront:self];
+}
+
+# pragma mark NSWindowDelegate
 
 - (void) windowDidResignKey:(NSNotification *)notification {
     [self.window close];
@@ -48,24 +65,26 @@
 
 -(IBAction)changeVisibility:(id)sender {
     if ([self.visibility.titleOfSelectedItem isEqualToString:@"Secret"]) {
-        [[Paste singleton] setVisibility:@"secret"];
+        [[Gist singleton] setVisibilityOverride:@"secret"];
     } else {
-        [[Paste singleton] setVisibility:@"public"];
+        [[Gist singleton] setVisibilityOverride:@"public"];
     }
 }
 
 -(IBAction)changeAnonymous:(id)sender {
     if ([self.anonymous.titleOfSelectedItem isEqualToString:@"Anonymous"]) {
-        [[Paste singleton] setAnonymous:@"true"];
+        [[Gist singleton] setAnonymousOverride:@"true"];
     } else {
-        [[Paste singleton] setAnonymous:@"false"];
+        [[Gist singleton] setAnonymousOverride:@"false"];
     }    
 }
 
 -(IBAction)performPaste:(id)sender {
     [self.window close];
-    [[Paste singleton] setExtension:self.pasteFormat.stringValue];
-    [[Paste singleton] sendToService];
+    [[Gist singleton] setFormatOverride:self.pasteFormat.stringValue];
+    [[Gist singleton] pasteDefaultClipboard];
 }
+
+# pragma mark -
 
 @end
