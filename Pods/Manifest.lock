@@ -2,15 +2,18 @@ PODS:
   - AFNetworking (1.2.1)
   - MASPreferences (1.0)
   - MASShortcut (1.2)
+  - StartAtLoginController (0.0.1)
 
 DEPENDENCIES:
   - AFNetworking
   - MASPreferences
   - MASShortcut
+  - StartAtLoginController
 
 SPEC CHECKSUMS:
-  AFNetworking: d1ba5908b233189e424e101721acef7905b58efb
+  AFNetworking: a44069e3c9c89867544f6639482f155c7e5f9b41
   MASPreferences: b8c112b4b6e6cbd32b8f49d249eb152d1eeb38f8
   MASShortcut: 154653d32ede2364f72b149a48ac9c64a6542479
+  StartAtLoginController: 9cb4e6537cc7d2e3fde1ccbaea2fdecd0c07fe5d
 
 COCOAPODS: 0.19.1

@@ -6,12 +6,15 @@
 //  Copyright (c) 2013 Josh Symonds. All rights reserved.
 //
 
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <ServiceManagement/ServiceManagement.h>
+
 #import "AppDelegate.h"
 #import "MenubarController.h"
 #import "PreferencesController.h"
 #import "ShortcutsController.h"
 #import "ModalController.h"
-#import "LaunchAtLoginController.h"
+#import "StartAtLoginController.h"
 #import "Constants.h"
 
 @implementation AppDelegate
@@ -49,8 +52,9 @@
 }
 
 - (void)assignDefaults {
-    LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
-    [launchController setLaunchAtLogin:YES];
+    StartAtLoginController *loginController = [[StartAtLoginController alloc] initWithIdentifier:@"com.joshsymonds.gistifyhelper"];
+    loginController.startAtLogin = YES;
+    loginController.enabled = YES;
     
     MASShortcut *gistifyCopiedText = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSShiftKeyMask|NSCommandKeyMask];
     NSData *gistifyCopiedTextData = [NSKeyedArchiver archivedDataWithRootObject:gistifyCopiedText];

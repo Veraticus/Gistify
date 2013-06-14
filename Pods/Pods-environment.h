@@ -24,3 +24,9 @@
 #define COCOAPODS_VERSION_MINOR_MASShortcut 2
 #define COCOAPODS_VERSION_PATCH_MASShortcut 0
 
+// StartAtLoginController
+#define COCOAPODS_POD_AVAILABLE_StartAtLoginController
+#define COCOAPODS_VERSION_MAJOR_StartAtLoginController 0
+#define COCOAPODS_VERSION_MINOR_StartAtLoginController 0
+#define COCOAPODS_VERSION_PATCH_StartAtLoginController 1
+

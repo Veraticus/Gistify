@@ -23,7 +23,6 @@
 		C2222B2E1745446D00F543AC /* GeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2222B1D1745446D00F543AC /* GeneralPreferencesView.xib */; };
 		C2222B2F1745446D00F543AC /* Gist.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B1F1745446D00F543AC /* Gist.m */; };
 		C2222B301745446D00F543AC /* Gistify-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2222B201745446D00F543AC /* Gistify-Info.plist */; };
-		C2222B311745446D00F543AC /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B231745446D00F543AC /* LaunchAtLoginController.m */; };
 		C2222B321745446D00F543AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B241745446D00F543AC /* main.m */; };
 		C261BB0F174EC79000B972BF /* Gistify.iconset in Resources */ = {isa = PBXBuildFile; fileRef = C261BB0E174EC79000B972BF /* Gistify.iconset */; };
 		C261BB18174EC89500B972BF /* menubar-clipboard-transmitting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB12174EC89500B972BF /* menubar-clipboard-transmitting@2x.png */; };
@@ -48,7 +47,32 @@
 		C261BB4A176A5F1F00B972BF /* ShortcutsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB49176A5F1F00B972BF /* ShortcutsController.m */; };
 		C261BB4C176A663600B972BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C261BB4B176A663600B972BF /* MainMenu.xib */; };
 		C261BB4E176B64A400B972BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C261BB4D176B64A300B972BF /* SystemConfiguration.framework */; };
+		C26D7A8F176B73240046CEA6 /* GistifyHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = C26D7A8D176B72BE0046CEA6 /* GistifyHelper.app */; };
+		C26D7A92176B750F0046CEA6 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26D7A91176B750F0046CEA6 /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C26D7A8C176B72BE0046CEA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C26D7A88176B72BD0046CEA6 /* GistifyHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C26D7A68176B72BD0046CEA6;
+			remoteInfo = GistifyHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C26D7A8E176B730E0046CEA6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				C26D7A8F176B73240046CEA6 /* GistifyHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		98C9558A27C1403EB3B7DD39 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,8 +104,6 @@
 		C2222B1F1745446D00F543AC /* Gist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gist.m; sourceTree = "<group>"; };
 		C2222B201745446D00F543AC /* Gistify-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Gistify-Info.plist"; sourceTree = "<group>"; };
 		C2222B211745446D00F543AC /* Gistify-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gistify-Prefix.pch"; sourceTree = "<group>"; };
-		C2222B221745446D00F543AC /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
-		C2222B231745446D00F543AC /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
 		C2222B241745446D00F543AC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C261BB0E174EC79000B972BF /* Gistify.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = Gistify.iconset; sourceTree = "<group>"; };
 		C261BB12174EC89500B972BF /* menubar-clipboard-transmitting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-transmitting@2x.png"; sourceTree = "<group>"; };
@@ -113,6 +135,8 @@
 		C261BB49176A5F1F00B972BF /* ShortcutsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortcutsController.m; sourceTree = "<group>"; };
 		C261BB4B176A663600B972BF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		C261BB4D176B64A300B972BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C26D7A88176B72BD0046CEA6 /* GistifyHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GistifyHelper.xcodeproj; path = GistifyHelper/GistifyHelper.xcodeproj; sourceTree = "<group>"; };
+		C26D7A91176B750F0046CEA6 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26D7A92176B750F0046CEA6 /* ServiceManagement.framework in Frameworks */,
 				C261BB4E176B64A400B972BF /* SystemConfiguration.framework in Frameworks */,
 				C2222AD5174436D500F543AC /* Cocoa.framework in Frameworks */,
 				122892F07873472CB89FB6AC /* libPods.a in Frameworks */,
@@ -136,6 +161,7 @@
 				C2222AD3174436D500F543AC /* Frameworks */,
 				C2222AD2174436D500F543AC /* Products */,
 				B7B248649E6041588A1C270A /* Pods.xcconfig */,
+				C26D7A88176B72BD0046CEA6 /* GistifyHelper.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +186,7 @@
 		C2222AD6174436D500F543AC /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C26D7A91176B750F0046CEA6 /* ServiceManagement.framework */,
 				C261BB4D176B64A300B972BF /* SystemConfiguration.framework */,
 				C2222AD7174436D500F543AC /* AppKit.framework */,
 				C2222AD8174436D500F543AC /* CoreData.framework */,
@@ -228,8 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				C261BB43176A575D00B972BF /* Preferences */,
-				C2222B221745446D00F543AC /* LaunchAtLoginController.h */,
-				C2222B231745446D00F543AC /* LaunchAtLoginController.m */,
 				C20039AA1746C53B00C668E6 /* ModalController.h */,
 				C20039AB1746C53B00C668E6 /* ModalController.m */,
 				C261BB40176A568100B972BF /* MenubarController.h */,
@@ -301,6 +326,14 @@
 			name = Preferences;
 			sourceTree = "<group>";
 		};
+		C26D7A89176B72BD0046CEA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C26D7A8D176B72BE0046CEA6 /* GistifyHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,6 +346,7 @@
 				C2222ACE174436D500F543AC /* Frameworks */,
 				C2222ACF174436D500F543AC /* Resources */,
 				32FA698DB6EE45E6BC352230 /* Copy Pods Resources */,
+				C26D7A8E176B730E0046CEA6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -342,12 +376,28 @@
 			mainGroup = C2222AC8174436D500F543AC;
 			productRefGroup = C2222AD2174436D500F543AC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C26D7A89176B72BD0046CEA6 /* Products */;
+					ProjectRef = C26D7A88176B72BD0046CEA6 /* GistifyHelper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C2222AD0174436D500F543AC /* Gistify */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C26D7A8D176B72BE0046CEA6 /* GistifyHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = GistifyHelper.app;
+			remoteRef = C26D7A8C176B72BE0046CEA6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C2222ACF174436D500F543AC /* Resources */ = {
@@ -422,7 +472,6 @@
 				C2222B291745446D00F543AC /* Constants.m in Sources */,
 				C2222B2D1745446D00F543AC /* GeneralPreferencesController.m in Sources */,
 				C2222B2F1745446D00F543AC /* Gist.m in Sources */,
-				C2222B311745446D00F543AC /* LaunchAtLoginController.m in Sources */,
 				C2222B321745446D00F543AC /* main.m in Sources */,
 				C20039AD1746C53C00C668E6 /* ModalController.m in Sources */,
 				C20039B1174702D800C668E6 /* ModalWindow.m in Sources */,
@@ -552,6 +601,7 @@
 				CODE_SIGN_ENTITLEMENTS = Gistify/Gistify.entitlements;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Joshua Symonds (965D78F3GT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gistify/Gistify-Prefix.pch";
 				INFOPLIST_FILE = "Gistify/Gistify-Info.plist";

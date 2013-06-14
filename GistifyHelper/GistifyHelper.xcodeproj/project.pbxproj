@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C26D7A6C176B72BD0046CEA6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26D7A6B176B72BD0046CEA6 /* Cocoa.framework */; };
+		C26D7A76176B72BD0046CEA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C26D7A74176B72BD0046CEA6 /* InfoPlist.strings */; };
+		C26D7A78176B72BD0046CEA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C26D7A77176B72BD0046CEA6 /* main.m */; };
+		C26D7A7C176B72BD0046CEA6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C26D7A7A176B72BD0046CEA6 /* Credits.rtf */; };
+		C26D7A7F176B72BD0046CEA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C26D7A7E176B72BD0046CEA6 /* AppDelegate.m */; };
+		C26D7A82176B72BD0046CEA6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26D7A80176B72BD0046CEA6 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C26D7A68176B72BD0046CEA6 /* GistifyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GistifyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26D7A6B176B72BD0046CEA6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C26D7A6E176B72BD0046CEA6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C26D7A6F176B72BD0046CEA6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C26D7A70176B72BD0046CEA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C26D7A73176B72BD0046CEA6 /* GistifyHelper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GistifyHelper-Info.plist"; sourceTree = "<group>"; };
+		C26D7A75176B72BD0046CEA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C26D7A77176B72BD0046CEA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C26D7A79176B72BD0046CEA6 /* GistifyHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GistifyHelper-Prefix.pch"; sourceTree = "<group>"; };
+		C26D7A7B176B72BD0046CEA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C26D7A7D176B72BD0046CEA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C26D7A7E176B72BD0046CEA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C26D7A81176B72BD0046CEA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C26D7A65176B72BD0046CEA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26D7A6C176B72BD0046CEA6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C26D7A5F176B72BD0046CEA6 = {
+			isa = PBXGroup;
+			children = (
+				C26D7A71176B72BD0046CEA6 /* GistifyHelper */,
+				C26D7A6A176B72BD0046CEA6 /* Frameworks */,
+				C26D7A69176B72BD0046CEA6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C26D7A69176B72BD0046CEA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C26D7A68176B72BD0046CEA6 /* GistifyHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C26D7A6A176B72BD0046CEA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C26D7A6B176B72BD0046CEA6 /* Cocoa.framework */,
+				C26D7A6D176B72BD0046CEA6 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C26D7A6D176B72BD0046CEA6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C26D7A6E176B72BD0046CEA6 /* AppKit.framework */,
+				C26D7A6F176B72BD0046CEA6 /* CoreData.framework */,
+				C26D7A70176B72BD0046CEA6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C26D7A71176B72BD0046CEA6 /* GistifyHelper */ = {
+			isa = PBXGroup;
+			children = (
+				C26D7A7D176B72BD0046CEA6 /* AppDelegate.h */,
+				C26D7A7E176B72BD0046CEA6 /* AppDelegate.m */,
+				C26D7A80176B72BD0046CEA6 /* MainMenu.xib */,
+				C26D7A72176B72BD0046CEA6 /* Supporting Files */,
+			);
+			path = GistifyHelper;
+			sourceTree = "<group>";
+		};
+		C26D7A72176B72BD0046CEA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C26D7A73176B72BD0046CEA6 /* GistifyHelper-Info.plist */,
+				C26D7A74176B72BD0046CEA6 /* InfoPlist.strings */,
+				C26D7A77176B72BD0046CEA6 /* main.m */,
+				C26D7A79176B72BD0046CEA6 /* GistifyHelper-Prefix.pch */,
+				C26D7A7A176B72BD0046CEA6 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C26D7A67176B72BD0046CEA6 /* GistifyHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C26D7A85176B72BD0046CEA6 /* Build configuration list for PBXNativeTarget "GistifyHelper" */;
+			buildPhases = (
+				C26D7A64176B72BD0046CEA6 /* Sources */,
+				C26D7A65176B72BD0046CEA6 /* Frameworks */,
+				C26D7A66176B72BD0046CEA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GistifyHelper;
+			productName = GistifyHelper;
+			productReference = C26D7A68176B72BD0046CEA6 /* GistifyHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C26D7A60176B72BD0046CEA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Josh Symonds";
+			};
+			buildConfigurationList = C26D7A63176B72BD0046CEA6 /* Build configuration list for PBXProject "GistifyHelper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C26D7A5F176B72BD0046CEA6;
+			productRefGroup = C26D7A69176B72BD0046CEA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C26D7A67176B72BD0046CEA6 /* GistifyHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C26D7A66176B72BD0046CEA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26D7A76176B72BD0046CEA6 /* InfoPlist.strings in Resources */,
+				C26D7A7C176B72BD0046CEA6 /* Credits.rtf in Resources */,
+				C26D7A82176B72BD0046CEA6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C26D7A64176B72BD0046CEA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26D7A78176B72BD0046CEA6 /* main.m in Sources */,
+				C26D7A7F176B72BD0046CEA6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C26D7A74176B72BD0046CEA6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C26D7A75176B72BD0046CEA6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C26D7A7A176B72BD0046CEA6 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C26D7A7B176B72BD0046CEA6 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C26D7A80176B72BD0046CEA6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C26D7A81176B72BD0046CEA6 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C26D7A83176B72BD0046CEA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C26D7A84176B72BD0046CEA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C26D7A86176B72BD0046CEA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ../Gistify/Gistify.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GistifyHelper/GistifyHelper-Prefix.pch";
+				INFOPLIST_FILE = "GistifyHelper/GistifyHelper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C26D7A87176B72BD0046CEA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ../Gistify/Gistify.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GistifyHelper/GistifyHelper-Prefix.pch";
+				INFOPLIST_FILE = "GistifyHelper/GistifyHelper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C26D7A63176B72BD0046CEA6 /* Build configuration list for PBXProject "GistifyHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C26D7A83176B72BD0046CEA6 /* Debug */,
+				C26D7A84176B72BD0046CEA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C26D7A85176B72BD0046CEA6 /* Build configuration list for PBXNativeTarget "GistifyHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C26D7A86176B72BD0046CEA6 /* Debug */,
+				C26D7A87176B72BD0046CEA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C26D7A60176B72BD0046CEA6 /* Project object */;
+}
