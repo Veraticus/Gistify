@@ -35,7 +35,7 @@
 }
 
 -(void)paste:(NSString *)pasting {
-    int randomNumber = arc4random_uniform(100000);
+    int randomNumber = arc4random_uniform(1000000);
     NSString *extension = [[Paste singleton] retrieveExtension];
     NSString *fileName = [NSString stringWithFormat:@"gistify%i%@", randomNumber, extension];
 
@@ -73,20 +73,21 @@
     
     NSDictionary *params = @{@"scopes": @[@"gist"], @"note": @"Gistify", @"client_id": kGistifyAppClientId, @"client_secret": kGistifyAppClientSecret};
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseLogin" object:nil userInfo:nil];
+    
     [self postPath:@"/authorizations" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [[NSUserDefaults standardUserDefaults] setObject:[responseObject objectForKey:@"token"] forKey:@"token"];
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"OK"];
         [alert setMessageText:@"You have logged in successfully."];
         [alert runModal];
-        
-        AppDelegate *app = (AppDelegate *)[NSApp delegate];
-        [app.accountPreferencesViewController setupLoginWindow];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"unpauseLogin" object:nil userInfo:nil];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"OK"];
         [alert setMessageText:@"Your username or password was incorrect."];
         [alert runModal];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"unpauseLogin" object:nil userInfo:nil];
     }];
 }
 

@@ -1,14 +1,14 @@
 //
-//  GeneralPreferencesViewController.m
+//  GeneralPreferencesController.m
 //  PasteAway
 //
 //  Created by Josh Symonds on 5/15/13.
 //  Copyright (c) 2013 Josh Symonds. All rights reserved.
 //
 
-#import "GeneralPreferencesViewController.h"
+#import "GeneralPreferencesController.h"
 
-@implementation GeneralPreferencesViewController
+@implementation GeneralPreferencesController
 
 - (void)loadView {
     [super loadView];

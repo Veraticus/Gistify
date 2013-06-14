@@ -1,5 +1,5 @@
 //
-//  AboutPreferencesViewController.h
+//  AboutPreferencesController.h
 //  Gistify
 //
 //  Created by Josh Symonds on 5/20/13.
@@ -10,6 +10,6 @@
 #import "MASPreferencesViewController.h"
 #import "Constants.h"
 
-@interface AboutPreferencesViewController : NSViewController <MASPreferencesViewController>
+@interface AboutPreferencesController : NSViewController <MASPreferencesViewController>
 
 @end

@@ -1,24 +1,25 @@
 //
-//  AccountPreferencesViewController.m
+//  AccountPreferencesController.m
 //  Gistify
 //
 //  Created by Josh Symonds on 5/26/13.
 //  Copyright (c) 2013 Josh Symonds. All rights reserved.
 //
 
-#import "AccountPreferencesViewController.h"
+#import "AccountPreferencesController.h"
 
-@interface AccountPreferencesViewController ()
+@interface AccountPreferencesController ()
 
 @end
 
-@implementation AccountPreferencesViewController
+@implementation AccountPreferencesController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Initialization code here.
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseLogin) name:@"pauseLogin" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unpauseLogin) name:@"unpauseLogin" object:nil];
     }
     
     return self;
@@ -94,6 +95,23 @@
         
         self.button.title = @"Logout";
         [[self.radioButtons cellWithTag:0] setEnabled:YES];
+    }
+}
+
+- (void)pauseLogin {
+    self.usernameField.enabled = NO;
+    self.passwordField.enabled = NO;
+    self.button.enabled = NO;
+}
+
+- (void)unpauseLogin {
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"token"] == nil) {
+        self.usernameField.enabled = YES;
+        self.passwordField.enabled = YES;
+        self.button.enabled = YES;
+        [self.passwordField becomeFirstResponder];
+    } else {
+        [self setupLoginWindow];
     }
 }
 

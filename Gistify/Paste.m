@@ -25,7 +25,7 @@
 - (void)openModal {
     if (self.modalWindowController == nil)
     {
-        ModalWindowController *controller = [[ModalWindowController alloc] initWithWindowNibName:@"ModalWindowController"];
+        ModalWindowController *controller = [[ModalWindowController alloc] initWithWindowNibName:@"ModalWindow"];
         self.modalWindowController = controller;
     }
     
@@ -87,8 +87,7 @@
         
         NSString *serviceName = [[NSUserDefaults standardUserDefaults] objectForKey:@"service"];
         
-        AppDelegate *app = (AppDelegate *)[NSApp delegate];
-        [app setMenuImage:@"transmitting"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"setMenuIcon" object:nil userInfo:@{@"image": @"transmitting"}];
         
         if ([serviceName isEqualToString:@"Gist"]) {
             [[Gist singleton] paste:pasting];
@@ -112,11 +111,10 @@
     notification.soundName = NSUserNotificationDefaultSoundName;
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     
-    AppDelegate *app = (AppDelegate *)[NSApp delegate];
-    [app setMenuImage:@"complete"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setMenuIcon" object:nil userInfo:@{@"image": @"complete"}];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
-        [app setMenuImage:@"idle"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"setMenuIcon" object:nil userInfo:@{@"image": @"idle"}];
     });
 }
 

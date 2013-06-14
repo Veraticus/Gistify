@@ -1,5 +1,5 @@
 //
-//  GeneralPreferencesViewController.h
+//  GeneralPreferencesController.h
 //  PasteAway
 //
 //  Created by Josh Symonds on 5/15/13.
@@ -15,7 +15,7 @@
 #import "MASPreferencesViewController.h"
 #import "Constants.h"
 
-@interface GeneralPreferencesViewController : NSViewController <MASPreferencesViewController>
+@interface GeneralPreferencesController : NSViewController <MASPreferencesViewController>
 
 @property (assign) IBOutlet MASShortcutView *gistifyCopiedTextView;
 @property (assign) IBOutlet MASShortcutView *gistifyCopiedTextAsView;

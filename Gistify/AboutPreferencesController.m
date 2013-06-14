@@ -1,18 +1,18 @@
 //
-//  AboutPreferencesViewController.m
+//  AboutPreferencesController.m
 //  Gistify
 //
 //  Created by Josh Symonds on 5/20/13.
 //  Copyright (c) 2013 Josh Symonds. All rights reserved.
 //
 
-#import "AboutPreferencesViewController.h"
+#import "AboutPreferencesController.h"
 
-@interface AboutPreferencesViewController ()
+@interface AboutPreferencesController ()
 
 @end
 
-@implementation AboutPreferencesViewController
+@implementation AboutPreferencesController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

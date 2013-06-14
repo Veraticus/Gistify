@@ -7,41 +7,23 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "GeneralPreferencesViewController.h"
-#import "AboutPreferencesViewController.h"
-#import "AccountPreferencesViewController.h"
-#import "MASShortcut.h"
-#import "MASShortcutView+UserDefaults.h"
-#import "MASShortcut+UserDefaults.h"
-#import "MASShortcut+Monitoring.h"
-#import "MASPreferencesWindowController.h"
-#import "LaunchAtLoginController.h"
-#import "Constants.h"
-#import "Paste.h"
 
-@class AccountPreferencesViewController;
+@class PreferencesController;
+@class ShortcutsController;
+@class MenubarController;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
+@private
+    PreferencesController *_preferencesController;
+    ShortcutsController *_shortcutsController;
+    MenubarController *_menubarController;
+}
 
-@property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSMenuItem *gistifyCopiedTextMenuItem;
-@property (assign) IBOutlet NSMenuItem *gistifyCopiedTextAsMenuItem;
-@property (assign) IBOutlet NSMenu *statusMenu;
-
-@property (nonatomic, retain) NSStatusItem *statusItem;
-@property (nonatomic, retain) GeneralPreferencesViewController *generalPreferencesViewController;
-@property (nonatomic, retain) AboutPreferencesViewController *aboutPreferencesViewController;
-@property (nonatomic, retain) AccountPreferencesViewController *accountPreferencesViewController;
-@property (nonatomic, retain) MASPreferencesWindowController *preferencesWindowController;
+@property (nonatomic, retain) PreferencesController *preferencesController;
+@property (nonatomic, retain) ShortcutsController *shortcutsController;
+@property (nonatomic, retain) MenubarController *menubarController;
 
 - (void)assignDefaults;
 - (void)upgradeDefaults;
-- (void)rebindMenuHotkeys;
-- (void)setMenuImage:(NSString *) image;
-
-- (IBAction)exitApplication:(id)sender;
-- (IBAction)showPreferencesWindow:(id)sender;
-- (IBAction)gistifyCopiedTextMenuItem:(id)sender;
-- (IBAction)gistifyCopiedTextAsMenuItem:(id)sender;
 
 @end

@@ -10,18 +10,18 @@
 		122892F07873472CB89FB6AC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C9558A27C1403EB3B7DD39 /* libPods.a */; };
 		C20039A91745CC2300C668E6 /* Paste.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039A81745CC2300C668E6 /* Paste.m */; };
 		C20039AD1746C53C00C668E6 /* ModalWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039AB1746C53B00C668E6 /* ModalWindowController.m */; };
-		C20039AE1746C53C00C668E6 /* ModalWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039AC1746C53B00C668E6 /* ModalWindowController.xib */; };
+		C20039AE1746C53C00C668E6 /* ModalWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039AC1746C53B00C668E6 /* ModalWindow.xib */; };
 		C20039B1174702D800C668E6 /* ModalWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039B0174702D800C668E6 /* ModalWindow.m */; };
-		C20039B5174A855C00C668E6 /* AboutPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039B3174A855C00C668E6 /* AboutPreferencesViewController.m */; };
-		C20039B6174A855C00C668E6 /* AboutPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039B4174A855C00C668E6 /* AboutPreferencesViewController.xib */; };
+		C20039B5174A855C00C668E6 /* AboutPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20039B3174A855C00C668E6 /* AboutPreferencesController.m */; };
+		C20039B6174A855C00C668E6 /* AboutPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20039B4174A855C00C668E6 /* AboutPreferencesView.xib */; };
 		C2222AD5174436D500F543AC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2222AD4174436D500F543AC /* Cocoa.framework */; };
 		C2222B271745446D00F543AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B111745446D00F543AC /* AppDelegate.m */; };
 		C2222B291745446D00F543AC /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B141745446D00F543AC /* Constants.m */; };
 		C2222B2A1745446D00F543AC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C2222B151745446D00F543AC /* Credits.rtf */; };
 		C2222B2B1745446D00F543AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2222B171745446D00F543AC /* InfoPlist.strings */; };
-		C2222B2C1745446D00F543AC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2222B191745446D00F543AC /* MainMenu.xib */; };
-		C2222B2D1745446D00F543AC /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B1C1745446D00F543AC /* GeneralPreferencesViewController.m */; };
-		C2222B2E1745446D00F543AC /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2222B1D1745446D00F543AC /* GeneralPreferencesViewController.xib */; };
+		C2222B2C1745446D00F543AC /* Menubar.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2222B191745446D00F543AC /* Menubar.xib */; };
+		C2222B2D1745446D00F543AC /* GeneralPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B1C1745446D00F543AC /* GeneralPreferencesController.m */; };
+		C2222B2E1745446D00F543AC /* GeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2222B1D1745446D00F543AC /* GeneralPreferencesView.xib */; };
 		C2222B2F1745446D00F543AC /* Gist.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B1F1745446D00F543AC /* Gist.m */; };
 		C2222B301745446D00F543AC /* Gistify-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2222B201745446D00F543AC /* Gistify-Info.plist */; };
 		C2222B311745446D00F543AC /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2222B231745446D00F543AC /* LaunchAtLoginController.m */; };
@@ -40,9 +40,14 @@
 		C261BB2A174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB24174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png */; };
 		C261BB2B174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB25174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png */; };
 		C261BB31174ED51600B972BF /* mini-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C261BB30174ED51600B972BF /* mini-icon.png */; };
-		C261BB361752CA4800B972BF /* AccountPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB341752CA4800B972BF /* AccountPreferencesViewController.m */; };
-		C261BB371752CA4800B972BF /* AccountPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C261BB351752CA4800B972BF /* AccountPreferencesViewController.xib */; };
+		C261BB361752CA4800B972BF /* AccountPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB341752CA4800B972BF /* AccountPreferencesController.m */; };
+		C261BB371752CA4800B972BF /* AccountPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C261BB351752CA4800B972BF /* AccountPreferencesView.xib */; };
 		C261BB3C1768D69C00B972BF /* NSApplicationWithOverrides.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB3B1768D69C00B972BF /* NSApplicationWithOverrides.m */; };
+		C261BB3F176A4B9F00B972BF /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB3E176A4B9F00B972BF /* StatusItemView.m */; };
+		C261BB42176A568200B972BF /* MenubarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB41176A568100B972BF /* MenubarController.m */; };
+		C261BB47176A595400B972BF /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB46176A595400B972BF /* PreferencesController.m */; };
+		C261BB4A176A5F1F00B972BF /* ShortcutsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C261BB49176A5F1F00B972BF /* ShortcutsController.m */; };
+		C261BB4C176A663600B972BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C261BB4B176A663600B972BF /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,12 +57,12 @@
 		C20039A81745CC2300C668E6 /* Paste.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Paste.m; sourceTree = "<group>"; };
 		C20039AA1746C53B00C668E6 /* ModalWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalWindowController.h; sourceTree = "<group>"; };
 		C20039AB1746C53B00C668E6 /* ModalWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalWindowController.m; sourceTree = "<group>"; };
-		C20039AC1746C53B00C668E6 /* ModalWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalWindowController.xib; sourceTree = "<group>"; };
+		C20039AC1746C53B00C668E6 /* ModalWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalWindow.xib; sourceTree = "<group>"; };
 		C20039AF174702D800C668E6 /* ModalWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalWindow.h; sourceTree = "<group>"; };
 		C20039B0174702D800C668E6 /* ModalWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalWindow.m; sourceTree = "<group>"; };
-		C20039B2174A855C00C668E6 /* AboutPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPreferencesViewController.h; sourceTree = "<group>"; };
-		C20039B3174A855C00C668E6 /* AboutPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPreferencesViewController.m; sourceTree = "<group>"; };
-		C20039B4174A855C00C668E6 /* AboutPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutPreferencesViewController.xib; sourceTree = "<group>"; };
+		C20039B2174A855C00C668E6 /* AboutPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPreferencesController.h; sourceTree = "<group>"; };
+		C20039B3174A855C00C668E6 /* AboutPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPreferencesController.m; sourceTree = "<group>"; };
+		C20039B4174A855C00C668E6 /* AboutPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutPreferencesView.xib; sourceTree = "<group>"; };
 		C2222AD1174436D500F543AC /* Gistify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gistify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2222AD4174436D500F543AC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C2222AD7174436D500F543AC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -69,10 +74,10 @@
 		C2222B141745446D00F543AC /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		C2222B161745446D00F543AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		C2222B181745446D00F543AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C2222B1A1745446D00F543AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		C2222B1B1745446D00F543AC /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
-		C2222B1C1745446D00F543AC /* GeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesViewController.m; sourceTree = "<group>"; };
-		C2222B1D1745446D00F543AC /* GeneralPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesViewController.xib; sourceTree = "<group>"; };
+		C2222B1A1745446D00F543AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Menubar.xib; sourceTree = "<group>"; };
+		C2222B1B1745446D00F543AC /* GeneralPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesController.h; sourceTree = "<group>"; };
+		C2222B1C1745446D00F543AC /* GeneralPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesController.m; sourceTree = "<group>"; };
+		C2222B1D1745446D00F543AC /* GeneralPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesView.xib; sourceTree = "<group>"; };
 		C2222B1E1745446D00F543AC /* Gist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gist.h; sourceTree = "<group>"; };
 		C2222B1F1745446D00F543AC /* Gist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gist.m; sourceTree = "<group>"; };
 		C2222B201745446D00F543AC /* Gistify-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Gistify-Info.plist"; sourceTree = "<group>"; };
@@ -95,11 +100,20 @@
 		C261BB25174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-clipboard-idle-highlighted.png"; sourceTree = "<group>"; };
 		C261BB30174ED51600B972BF /* mini-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-icon.png"; sourceTree = "<group>"; };
 		C261BB32174EF4F700B972BF /* Gistify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Gistify.entitlements; sourceTree = "<group>"; };
-		C261BB331752CA4800B972BF /* AccountPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountPreferencesViewController.h; sourceTree = "<group>"; };
-		C261BB341752CA4800B972BF /* AccountPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountPreferencesViewController.m; sourceTree = "<group>"; };
-		C261BB351752CA4800B972BF /* AccountPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountPreferencesViewController.xib; sourceTree = "<group>"; };
+		C261BB331752CA4800B972BF /* AccountPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountPreferencesController.h; sourceTree = "<group>"; };
+		C261BB341752CA4800B972BF /* AccountPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountPreferencesController.m; sourceTree = "<group>"; };
+		C261BB351752CA4800B972BF /* AccountPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountPreferencesView.xib; sourceTree = "<group>"; };
 		C261BB3A1768D69C00B972BF /* NSApplicationWithOverrides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSApplicationWithOverrides.h; sourceTree = "<group>"; };
 		C261BB3B1768D69C00B972BF /* NSApplicationWithOverrides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSApplicationWithOverrides.m; sourceTree = "<group>"; };
+		C261BB3D176A4B9F00B972BF /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
+		C261BB3E176A4B9F00B972BF /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
+		C261BB40176A568100B972BF /* MenubarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenubarController.h; sourceTree = "<group>"; };
+		C261BB41176A568100B972BF /* MenubarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenubarController.m; sourceTree = "<group>"; };
+		C261BB45176A595400B972BF /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		C261BB46176A595400B972BF /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		C261BB48176A5F1F00B972BF /* ShortcutsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortcutsController.h; sourceTree = "<group>"; };
+		C261BB49176A5F1F00B972BF /* ShortcutsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortcutsController.m; sourceTree = "<group>"; };
+		C261BB4B176A663600B972BF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,11 +171,11 @@
 			isa = PBXGroup;
 			children = (
 				C261BB32174EF4F700B972BF /* Gistify.entitlements */,
-				C261BB391768D68700B972BF /* Extensions */,
 				C2222B341745447800F543AC /* Assets */,
 				C2222B351745447D00F543AC /* Models */,
 				C2222B37174544A400F543AC /* Controllers */,
 				C2222B38174544B600F543AC /* Views */,
+				C261BB391768D68700B972BF /* Extensions */,
 				C2222B101745446D00F543AC /* AppDelegate.h */,
 				C2222B111745446D00F543AC /* AppDelegate.m */,
 				C2222B131745446D00F543AC /* Constants.h */,
@@ -214,16 +228,17 @@
 		C2222B37174544A400F543AC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C261BB331752CA4800B972BF /* AccountPreferencesViewController.h */,
-				C261BB341752CA4800B972BF /* AccountPreferencesViewController.m */,
-				C2222B1B1745446D00F543AC /* GeneralPreferencesViewController.h */,
-				C2222B1C1745446D00F543AC /* GeneralPreferencesViewController.m */,
+				C261BB43176A575D00B972BF /* Preferences */,
 				C2222B221745446D00F543AC /* LaunchAtLoginController.h */,
 				C2222B231745446D00F543AC /* LaunchAtLoginController.m */,
 				C20039AA1746C53B00C668E6 /* ModalWindowController.h */,
 				C20039AB1746C53B00C668E6 /* ModalWindowController.m */,
-				C20039B2174A855C00C668E6 /* AboutPreferencesViewController.h */,
-				C20039B3174A855C00C668E6 /* AboutPreferencesViewController.m */,
+				C261BB40176A568100B972BF /* MenubarController.h */,
+				C261BB41176A568100B972BF /* MenubarController.m */,
+				C261BB45176A595400B972BF /* PreferencesController.h */,
+				C261BB46176A595400B972BF /* PreferencesController.m */,
+				C261BB48176A5F1F00B972BF /* ShortcutsController.h */,
+				C261BB49176A5F1F00B972BF /* ShortcutsController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -231,13 +246,14 @@
 		C2222B38174544B600F543AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C261BB351752CA4800B972BF /* AccountPreferencesViewController.xib */,
-				C2222B1D1745446D00F543AC /* GeneralPreferencesViewController.xib */,
-				C2222B191745446D00F543AC /* MainMenu.xib */,
-				C20039AC1746C53B00C668E6 /* ModalWindowController.xib */,
-				C20039B4174A855C00C668E6 /* AboutPreferencesViewController.xib */,
+				C261BB44176A590B00B972BF /* Preferences */,
+				C2222B191745446D00F543AC /* Menubar.xib */,
+				C20039AC1746C53B00C668E6 /* ModalWindow.xib */,
 				C20039AF174702D800C668E6 /* ModalWindow.h */,
 				C20039B0174702D800C668E6 /* ModalWindow.m */,
+				C261BB3D176A4B9F00B972BF /* StatusItemView.h */,
+				C261BB3E176A4B9F00B972BF /* StatusItemView.m */,
+				C261BB4B176A663600B972BF /* MainMenu.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -261,6 +277,29 @@
 				C261BB3B1768D69C00B972BF /* NSApplicationWithOverrides.m */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C261BB43176A575D00B972BF /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				C261BB331752CA4800B972BF /* AccountPreferencesController.h */,
+				C261BB341752CA4800B972BF /* AccountPreferencesController.m */,
+				C2222B1B1745446D00F543AC /* GeneralPreferencesController.h */,
+				C2222B1C1745446D00F543AC /* GeneralPreferencesController.m */,
+				C20039B2174A855C00C668E6 /* AboutPreferencesController.h */,
+				C20039B3174A855C00C668E6 /* AboutPreferencesController.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		C261BB44176A590B00B972BF /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				C261BB351752CA4800B972BF /* AccountPreferencesView.xib */,
+				C2222B1D1745446D00F543AC /* GeneralPreferencesView.xib */,
+				C20039B4174A855C00C668E6 /* AboutPreferencesView.xib */,
+			);
+			name = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,11 +357,11 @@
 			files = (
 				C2222B2A1745446D00F543AC /* Credits.rtf in Resources */,
 				C2222B2B1745446D00F543AC /* InfoPlist.strings in Resources */,
-				C2222B2C1745446D00F543AC /* MainMenu.xib in Resources */,
-				C2222B2E1745446D00F543AC /* GeneralPreferencesViewController.xib in Resources */,
+				C2222B2C1745446D00F543AC /* Menubar.xib in Resources */,
+				C2222B2E1745446D00F543AC /* GeneralPreferencesView.xib in Resources */,
 				C2222B301745446D00F543AC /* Gistify-Info.plist in Resources */,
-				C20039AE1746C53C00C668E6 /* ModalWindowController.xib in Resources */,
-				C20039B6174A855C00C668E6 /* AboutPreferencesViewController.xib in Resources */,
+				C20039AE1746C53C00C668E6 /* ModalWindow.xib in Resources */,
+				C20039B6174A855C00C668E6 /* AboutPreferencesView.xib in Resources */,
 				C261BB0F174EC79000B972BF /* Gistify.iconset in Resources */,
 				C261BB18174EC89500B972BF /* menubar-clipboard-transmitting@2x.png in Resources */,
 				C261BB19174EC89500B972BF /* menubar-clipboard-idle@2x.png in Resources */,
@@ -337,7 +376,8 @@
 				C261BB2A174ED1EE00B972BF /* menubar-clipboard-idle-highlighted@2x.png in Resources */,
 				C261BB2B174ED1EE00B972BF /* menubar-clipboard-idle-highlighted.png in Resources */,
 				C261BB31174ED51600B972BF /* mini-icon.png in Resources */,
-				C261BB371752CA4800B972BF /* AccountPreferencesViewController.xib in Resources */,
+				C261BB371752CA4800B972BF /* AccountPreferencesView.xib in Resources */,
+				C261BB4C176A663600B972BF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,16 +421,20 @@
 			files = (
 				C2222B271745446D00F543AC /* AppDelegate.m in Sources */,
 				C2222B291745446D00F543AC /* Constants.m in Sources */,
-				C2222B2D1745446D00F543AC /* GeneralPreferencesViewController.m in Sources */,
+				C2222B2D1745446D00F543AC /* GeneralPreferencesController.m in Sources */,
 				C2222B2F1745446D00F543AC /* Gist.m in Sources */,
 				C2222B311745446D00F543AC /* LaunchAtLoginController.m in Sources */,
 				C2222B321745446D00F543AC /* main.m in Sources */,
 				C20039A91745CC2300C668E6 /* Paste.m in Sources */,
 				C20039AD1746C53C00C668E6 /* ModalWindowController.m in Sources */,
 				C20039B1174702D800C668E6 /* ModalWindow.m in Sources */,
-				C20039B5174A855C00C668E6 /* AboutPreferencesViewController.m in Sources */,
-				C261BB361752CA4800B972BF /* AccountPreferencesViewController.m in Sources */,
+				C20039B5174A855C00C668E6 /* AboutPreferencesController.m in Sources */,
+				C261BB361752CA4800B972BF /* AccountPreferencesController.m in Sources */,
 				C261BB3C1768D69C00B972BF /* NSApplicationWithOverrides.m in Sources */,
+				C261BB3F176A4B9F00B972BF /* StatusItemView.m in Sources */,
+				C261BB42176A568200B972BF /* MenubarController.m in Sources */,
+				C261BB47176A595400B972BF /* PreferencesController.m in Sources */,
+				C261BB4A176A5F1F00B972BF /* ShortcutsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,12 +457,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		C2222B191745446D00F543AC /* MainMenu.xib */ = {
+		C2222B191745446D00F543AC /* Menubar.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C2222B1A1745446D00F543AC /* en */,
 			);
-			name = MainMenu.xib;
+			name = Menubar.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

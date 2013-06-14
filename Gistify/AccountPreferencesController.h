@@ -1,5 +1,5 @@
 //
-//  AccountPreferencesViewController.h
+//  AccountPreferencesController.h
 //  Gistify
 //
 //  Created by Josh Symonds on 5/26/13.
@@ -11,7 +11,7 @@
 #import "Gist.h"
 #import "Constants.h"
 
-@interface AccountPreferencesViewController : NSViewController <MASPreferencesViewController>
+@interface AccountPreferencesController : NSViewController <MASPreferencesViewController>
 
 @property (assign) IBOutlet NSMatrix *radioButtons;
 @property (assign) IBOutlet NSTextField *usernameLabel;
