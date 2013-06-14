@@ -46,20 +46,59 @@
     
     if (objects != nil && objects.count != 0) {
         NSString *pasting = [objects objectAtIndex:0];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"setMenuIcon" object:nil userInfo:@{@"image": @"transmitting"}];
+        [self pasteString:pasting];
+    } else {
+        [self nothingToPaste];
+    }
+}
 
-        [self setToken];        
+-(void)pasteString:(NSString *)pasting {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setMenuIcon" object:nil userInfo:@{@"image": @"transmitting"}];
+    
+    [self setToken];
+    NSMutableDictionary *params = [self params];
+    [params setObject:@{[self randomFilename]: @{@"content": pasting}} forKey:@"files"];
+    
+    [self postPath:@"/gists" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self receive:[responseObject objectForKey:@"html_url"]];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self nothingToPaste];
+    }];
+}
+
+-(void)pasteFiles:(NSArray *)files {
+    if ([files count] != 0) {
         NSMutableDictionary *params = [self params];
-        [params setObject:@{[self randomFilename]: @{@"content": pasting}} forKey:@"files"];
-                
-        [self postPath:@"/gists" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            [self receive:[responseObject objectForKey:@"html_url"]];
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSAlert *alert = [[NSAlert alloc] init];
-            [alert addButtonWithTitle:@"OK"];
-            [alert setMessageText:@"Gistify failed! Make sure you have text to Gistify on your clipboard."];
-            [alert runModal];
-        }];
+        NSMutableDictionary *filesToWrite = [[NSMutableDictionary alloc] init];
+
+        for (id path in files) {
+            NSString *filename = [path lastPathComponent];
+            NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+            NSUInteger bytes = [content lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+            
+            if (content != nil && bytes <= 2097152) {
+                [filesToWrite setObject:@{@"content": content} forKey:filename];
+            }
+        }
+        
+        NSArray *keyArray = [filesToWrite allKeys];
+        
+        if ([keyArray count] != 0) {
+            [params setObject:filesToWrite forKey:@"files"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"setMenuIcon" object:nil userInfo:@{@"image": @"transmitting"}];
+            
+            [self setToken];
+            
+            NSLog(@"Params: %@", params);
+            
+            [self postPath:@"/gists" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                [self receive:[responseObject objectForKey:@"html_url"]];
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                [self badPaste];
+            }];
+        } else {
+            [self badPaste];
+        }
     } else {
         [self nothingToPaste];
     }
@@ -113,9 +152,20 @@
 #pragma mark Helper Methods
 
 -(void)nothingToPaste {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setMenuIcon" object:nil userInfo:@{@"image": @"idle"}];
+    
     NSUserNotification *notification = [[NSUserNotification alloc] init];
     notification.title = @"Nothing to Paste";
     notification.informativeText = @"Try copying something before you Gistify it.";
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+}
+
+-(void)badPaste {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setMenuIcon" object:nil userInfo:@{@"image": @"idle"}];
+    
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    notification.title = @"Gistify Error";
+    notification.informativeText = @"That content could not be sent to Gist!";
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 }
 

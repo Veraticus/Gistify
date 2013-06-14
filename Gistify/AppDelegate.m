@@ -13,7 +13,6 @@
 #import "ModalController.h"
 #import "LaunchAtLoginController.h"
 #import "Constants.h"
-#import "Paste.h"
 
 @implementation AppDelegate
 

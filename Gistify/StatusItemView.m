@@ -7,6 +7,7 @@
 //
 
 #import "StatusItemView.h"
+#import "Gist.h"
 
 @implementation StatusItemView
 
@@ -67,13 +68,16 @@
     pboard = [sender draggingPasteboard];
     
     if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
+        // A number of files were dragged, paste them one at a time
+        
+        
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
-        
-        NSLog(@"Files: %@",files);
+        [[Gist singleton] pasteFiles:files];
     } else if ( [[pboard types] containsObject:NSPasteboardTypeString] ) {
-        NSArray *text = [pboard stringForType:NSPasteboardTypeString];
+        // A single line of text was dragged, paste it directly
         
-        NSLog(@"String: %@", text);
+        NSString *pasting = [pboard stringForType:NSPasteboardTypeString];
+        [[Gist singleton] pasteString:pasting];
     }
     return YES;
 }

@@ -22,11 +22,16 @@
 @property (nonatomic, retain) NSString *visibilityOverride;
 
 +(Gist *)singleton;
+
 -(void)pasteDefaultClipboard;
+-(void)pasteFiles:(NSArray *)files;;
+-(void)pasteString:(NSString *)string;
+
 -(void)authenticate;
 -(void)receive:(NSString *)response;
 
 -(void)nothingToPaste;
+-(void)badPaste;
 
 -(void)setToken;
 -(NSMutableDictionary *)params;

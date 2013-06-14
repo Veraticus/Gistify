@@ -8,7 +8,7 @@
 
 #import "ShortcutsController.h"
 #import "Constants.h"
-#import "Paste.h"
+#import "Gist.h"
 #import "MASShortcut.h"
 #import "MASShortcutView+UserDefaults.h"
 #import "MASShortcut+UserDefaults.h"
