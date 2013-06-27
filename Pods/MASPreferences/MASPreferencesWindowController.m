@@ -100,8 +100,7 @@ static NSString *const PreferencesKeyForViewBounds (NSString *identifier)
 
 - (void)windowWillClose:(NSNotification *)notification
 {
-    ProcessSerialNumber psn = { 0, kCurrentProcess };
-    TransformProcessType(&psn, kProcessTransformToUIElementApplication);
+
 }
 
 #pragma mark -

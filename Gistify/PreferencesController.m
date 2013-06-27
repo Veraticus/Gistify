@@ -39,8 +39,6 @@
 }
 
 - (void)openPreferences {
-    ProcessSerialNumber psn = { 0, kCurrentProcess };
-    TransformProcessType(&psn, kProcessTransformToForegroundApplication);
     [[NSApp mainWindow] close];
     
     [NSApp activateIgnoringOtherApps:YES];
