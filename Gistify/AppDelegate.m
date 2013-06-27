@@ -53,7 +53,7 @@
 
 - (void)assignDefaults {
     StartAtLoginController *loginController = [[StartAtLoginController alloc] initWithIdentifier:@"com.joshsymonds.gistifyhelper"];
-    loginController.startAtLogin = YES;
+    loginController.startAtLogin = NO;
     loginController.enabled = YES;
     
     MASShortcut *gistifyCopiedText = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSShiftKeyMask|NSCommandKeyMask];
