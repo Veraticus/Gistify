@@ -12,6 +12,7 @@
 @class ShortcutsController;
 @class MenubarController;
 @class ModalController;
+@class StartAtLoginController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
 @private
@@ -25,6 +26,7 @@
 @property (nonatomic, retain) ShortcutsController *shortcutsController;
 @property (nonatomic, retain) MenubarController *menubarController;
 @property (nonatomic, retain) ModalController *modalController;
+@property (nonatomic, retain) StartAtLoginController *startAtLoginController;
 
 - (void)assignDefaults;
 - (void)upgradeDefaults;

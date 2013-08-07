@@ -19,29 +19,29 @@
 
 @implementation AppDelegate
 
-@synthesize preferencesController = _preferencesController;
-@synthesize shortcutsController = _shortcutsController;
-@synthesize menubarController = _menubarController;
-@synthesize modalController = _modalController;
+@synthesize preferencesController, shortcutsController, menubarController, modalController, startAtLoginController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Create preferences pane
-    _preferencesController = [[PreferencesController alloc] init];
+    self.preferencesController = [[PreferencesController alloc] init];
     
     // Setup shortcuts
-    _shortcutsController = [[ShortcutsController alloc] init];
+    self.shortcutsController = [[ShortcutsController alloc] init];
     
     // Setup menu
-    _menubarController = [[MenubarController alloc] init];
+    self.menubarController = [[MenubarController alloc] init];
     
     // Setup modal
-    _modalController = [[ModalController alloc] initWithWindowNibName:@"Modal"];
+    self.modalController = [[ModalController alloc] initWithWindowNibName:@"Modal"];
+    
+    // Setup login controller
+    self.startAtLoginController = [[StartAtLoginController alloc] initWithIdentifier:@"com.joshsymonds.gistifyhelper"];
  
     // First-time setup
     if (![[NSUserDefaults standardUserDefaults] objectForKey:kGistifyGlobalShortcut]) {
         [self assignDefaults];
-   }
+    }
     
     if (![[NSUserDefaults standardUserDefaults] objectForKey:@"anonymous"]) {
         [self upgradeDefaults];
@@ -49,13 +49,14 @@
     
     // Register for notifications
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+    
+    // Show the preferences window if startup is not enabled
+    if (!self.startAtLoginController.enabled) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"showPreferencesWindow" object:nil];
+    }
 }
 
 - (void)assignDefaults {
-    StartAtLoginController *loginController = [[StartAtLoginController alloc] initWithIdentifier:@"com.joshsymonds.gistifyhelper"];
-    loginController.startAtLogin = NO;
-    loginController.enabled = YES;
-    
     MASShortcut *gistifyCopiedText = [MASShortcut shortcutWithKeyCode:9 modifierFlags:NSShiftKeyMask|NSCommandKeyMask];
     NSData *gistifyCopiedTextData = [NSKeyedArchiver archivedDataWithRootObject:gistifyCopiedText];
     [[NSUserDefaults standardUserDefaults] setObject:gistifyCopiedTextData forKey:kGistifyGlobalShortcut];

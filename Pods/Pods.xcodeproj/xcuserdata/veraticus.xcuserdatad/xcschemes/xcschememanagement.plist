@@ -4,6 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-AFNetworking.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-MASPreferences.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-MASShortcut.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Pods-StartAtLoginController.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,12 +32,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>08251A1F67CB42219561D460</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9C4C5DD9BEE049E78D9D8508</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A14AC8B256984A95A2F0A0A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A86CFD6AF09E4640898ED59D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A87620630705450286EF03CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0CF544B5A2045F8830020E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1EE5EAE34A145F6A49AC308</key>
 		<dict>
 			<key>primary</key>
 			<true/>

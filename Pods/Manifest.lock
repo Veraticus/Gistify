@@ -14,6 +14,6 @@ SPEC CHECKSUMS:
   AFNetworking: a44069e3c9c89867544f6639482f155c7e5f9b41
   MASPreferences: b8c112b4b6e6cbd32b8f49d249eb152d1eeb38f8
   MASShortcut: 154653d32ede2364f72b149a48ac9c64a6542479
-  StartAtLoginController: 9cb4e6537cc7d2e3fde1ccbaea2fdecd0c07fe5d
+  StartAtLoginController: 7ab3011175dbcce1f887cc004fb5faabf29aba8d
 
-COCOAPODS: 0.19.1
+COCOAPODS: 0.22.2
